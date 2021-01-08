@@ -1,0 +1,1321 @@
+@prefix : <http://modSem/miriam/ontologies/2020/mangaWorld/Inferenze#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://modSem/miriam/ontologies/2020/mangaWorld/Inferenze> .
+
+<http://modSem/miriam/ontologies/2020/mangaWorld/Inferenze> rdf:type owl:Ontology ;
+                                                             <http://purl.org/dc/elements/1.1/creator> "Miriam Fasciana"@it ;
+                                                             <http://purl.org/dc/elements/1.1/date> "2020-01-07"@en ;
+                                                             <http://purl.org/dc/elements/1.1/description> "Ontologia sul dominio dei manga focalizzata sulle categorie"@it ;
+                                                             <http://purl.org/dc/elements/1.1/title> "Manga ontology"@en ;
+                                                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "manga" ;
+                                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "http://modSem/miriam/ontologies/2020/mangaWorld" ;
+                                                             <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "What is the end time of this interval? What is the starting time of this interval? What is the date of this time interval?"^^xsd:string ,
+                                                                                                                                                       "What is this entity part of? What are the parts of this entity?"^^xsd:string ;
+                                                             <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#extractedFrom> "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" ;
+                                                             <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences> "This CP allows designers to represent entities and their parts i.e., part-whole relations, with transitivity. The temporal aspect of this relation cannot be expressed; in order to solve this issue the time indexed part of CP can be used."^^xsd:string ,
+                                                                                                                                                    """We can represent time intervals as objects.
+However, the dates of the time interval are not part of the domain of discourse, they are datatype values. If there is the need of reasoning about dates, this CP should be used in composition with the region CP."""^^xsd:string ;
+                                                             <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent> "To represent time intervals."^^xsd:string ,
+                                                                                                                                              "To represents entities and their parts."^^xsd:string ;
+                                                             <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs> "It is a component of time-indexed person role, time indexed part of, and can be composed with other CPs when temporal aspects need to be represented."^^xsd:string ,
+                                                                                                                                               "The time indexed part of is used as alternative when the temporal indexing has to be represented. Part of CP is specialized by componency. Sometimes this CP is wrongly used in order to model constituency and membership. These two modeling problems are addressed by constituency, and collection entity CPs, respectively."^^xsd:string ;
+                                                             <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#scenarios> "Brain and heart are parts of the human body, substantia nigra is part of brain."^^xsd:string ,
+                                                                                                                                              "The time inter val “January 2008” starts at 2008 − 01 − 0 and ends at 2008 − 01 − 31."^^xsd:string ;
+                                                             rdfs:comment """The time interval pattern. 
+This pattern is extracted from DOLCE-UltraLite by partial clone of elements and expansion. Two datatype properties have been added which allow to express the boundaries of the time interval.
+Ranges of datatype properties are not indicated, because otherwise specializing them with different xsd datatypes would lead to inconsistencies.""" ;
+                                                             rdfs:label "MangaWorld"@en ,
+                                                                        "MondoManga"@it ,
+                                                                        "part of" ,
+                                                                        "part-whole" ;
+                                                             owl:versionInfo "1.1 added rdfs:isDefinedBy for all named entities"^^xsd:string ,
+                                                                             "Created by Valentina Presutti"^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> rdf:type owl:AnnotationProperty ;
+                                                                                          rdfs:comment "This annotation property is used for exemplifying possible requirements the content pattern provides a solution for. Requirements are expressed as natural language competency questions." .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#extractedFrom
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#extractedFrom> rdf:type owl:AnnotationProperty ;
+                                                                                     rdfs:comment "This annotation property should be assigned with a URI, which points to the possible reference ontology which the annotated pattern was extracted from (i.e. the reference ontology that the ontology elements have been deeply or partially cloned by). The range is not explicit in the definition of the annotation property because it would turn the ontology to OWL Full. E.g. The participation pattern is extracted from the Dolce Ultra Lite ontology, hence the value for this annotation property is http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences> rdf:type owl:AnnotationProperty ;
+                                                                                       rdfs:comment "This annotation property is used for briefly describing the benefits and/or possible trade-offs when using the CP." .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent> rdf:type owl:AnnotationProperty ;
+                                                                                 rdfs:comment "This annotation property is used in order to describe the intent of the content pattern." .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs> rdf:type owl:AnnotationProperty ;
+                                                                                  rdfs:comment "This annotation property can be used to indicate other CPs (if any) that specialize, generalize, inlcude, or are components of the CP. Furthermore, this field may indicate other CPs that are typically used in conjunction with the described one. Important similarities and differences with other patterns can be also described here." .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#scenarios
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#scenarios> rdf:type owl:AnnotationProperty ;
+                                                                                 rdfs:comment "This annotation property is used for describing examples of instantiation of the Content OP. For example, for the part-of Content OP (which represents part-whole relations) a possible scenario is the sentence: \"the brain is part of the human body\". Scenarios are expressed as natural language sentences." .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#ambientata_in_contesto
+<http://modSem/miriam/ontologies/2020/mangaWorld#ambientata_in_contesto> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:comment "(Manga's) Category has a plot set in a specific context"@en ,
+                                                                                      "La trama di una categoria (di manga) è ambientata in uno specifico contesto"@it ;
+                                                                         rdfs:label "Ambientata in contesto"@it ,
+                                                                                    "Set in context"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#disegna
+<http://modSem/miriam/ontologies/2020/mangaWorld#disegna> rdf:type owl:ObjectProperty ;
+                                                          owl:inverseOf <http://modSem/miriam/ontologies/2020/mangaWorld#disegnata_da> ;
+                                                          rdfs:comment "A mangaka draws a specific manga"@en ,
+                                                                       "Un mangaka disegna uno specifico manga"@it ;
+                                                          rdfs:label "Disegna"@it ,
+                                                                     "Draws"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#disegnata_da
+<http://modSem/miriam/ontologies/2020/mangaWorld#disegnata_da> rdf:type owl:ObjectProperty ;
+                                                               rdfs:comment "A manga is drawn by a specific mangaka"@en ,
+                                                                            "Un manga è disegnato da uno specifico mangaka"@it ;
+                                                               rdfs:label "Disegnato da"@it ,
+                                                                          "Drawn by"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#ha_categoria
+<http://modSem/miriam/ontologies/2020/mangaWorld#ha_categoria> rdf:type owl:ObjectProperty ;
+                                                               rdfs:comment "A manga belongs to a specific category"@en ,
+                                                                            "Un manga appartiene ad una categoria specifica"@it ;
+                                                               rdfs:label "Ha categoria"@it ,
+                                                                          "Has category"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#ha_genere
+<http://modSem/miriam/ontologies/2020/mangaWorld#ha_genere> rdf:type owl:ObjectProperty ;
+                                                            rdfs:comment "A category's plot belongs to a specific genre"@en ,
+                                                                         "La trama di una categoria appartiene ad uno specifico genere"@it ;
+                                                            rdfs:label "Ha genere"@it ,
+                                                                       "Has genre"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#has_chapter
+<http://modSem/miriam/ontologies/2020/mangaWorld#has_chapter> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> ;
+                                                              owl:inverseOf <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_tankobon> ;
+                                                              rdfs:comment "A tankobon contains several chapters"@en ,
+                                                                           "Un tankobon contiene diversi capitoli"@it ;
+                                                              rdfs:label "Ha capitolo"@it ,
+                                                                         "Has chapter"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#has_tankobon
+<http://modSem/miriam/ontologies/2020/mangaWorld#has_tankobon> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> ;
+                                                               owl:inverseOf <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_manga> ;
+                                                               rdfs:comment "A manga's series contains several tankobon"@en ,
+                                                                            "Una serie di manga è composta da diversi tankobon"@it ;
+                                                               rdfs:label "Ha tankobon"@it ,
+                                                                          "Has tankobon"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_manga
+<http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_manga> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> ;
+                                                                   rdfs:comment "A tankobon is a part of a specific manga"@en ,
+                                                                                "Un tankobon fa parte di un certo manga"@it ;
+                                                                   rdfs:label "Is part of manga"@en ,
+                                                                              "è parte del manga"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_tankobon
+<http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_tankobon> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> ;
+                                                                      rdfs:comment "A chapter is contained in a specfic tankobon"@en ,
+                                                                                   "Un capitolo è contenuto in un certo tankobon"@it ;
+                                                                      rdfs:label "Is part of tankobon"@en ,
+                                                                                 "è parte del tankobon"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#magazine_ha_categoria
+<http://modSem/miriam/ontologies/2020/mangaWorld#magazine_ha_categoria> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:comment "A magazine is specialized in a manga's category"@en ,
+                                                                                     "Una rivista è specializzata in una certa categoria di manga"@it ;
+                                                                        rdfs:label "Magazine has category"@en ,
+                                                                                   "Rivista ha categoria"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#manga_ha_contesto
+<http://modSem/miriam/ontologies/2020/mangaWorld#manga_ha_contesto> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:comment "A manga is set in a context"@en ,
+                                                                                 "Un manga è ambientato in un certo contesto"@it ;
+                                                                    rdfs:label "Manga ha contesto"@it ,
+                                                                               "Manga has context"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#nazione_di_origine
+<http://modSem/miriam/ontologies/2020/mangaWorld#nazione_di_origine> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:comment "A manga is originally published in a specific Nation"@en ,
+                                                                                  "Un manga viene pubblicato originariamente in una certa Nazione"@it ;
+                                                                     rdfs:label "Nazione di origine"@it ,
+                                                                                "Original Nation"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#pubblicata_nel_periodo
+<http://modSem/miriam/ontologies/2020/mangaWorld#pubblicata_nel_periodo> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:comment "A manga's publication takes a certain period of time"@en ,
+                                                                                      "La pubblicazione di un manga avviene un certo periodo di tempo"@it ;
+                                                                         rdfs:label "Pubblicata nel periodo"@it ,
+                                                                                    "Published in period"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#scritta_da
+<http://modSem/miriam/ontologies/2020/mangaWorld#scritta_da> rdf:type owl:ObjectProperty ;
+                                                             owl:inverseOf <http://modSem/miriam/ontologies/2020/mangaWorld#scrive> ;
+                                                             rdfs:comment "A manga is written by a specific mangaka"@en ,
+                                                                          "Un manga è scritto da uno specifico mangaka"@it ;
+                                                             rdfs:label "Scritto da"@it ,
+                                                                        "Written by"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#scrive
+<http://modSem/miriam/ontologies/2020/mangaWorld#scrive> rdf:type owl:ObjectProperty ;
+                                                         rdfs:comment "A mangaka writes a specific manga"@en ,
+                                                                      "Un mangaka scrive uno specifico manga"@it ;
+                                                         rdfs:label "Scrive"@it ,
+                                                                    "Writes"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#serializzato_su
+<http://modSem/miriam/ontologies/2020/mangaWorld#serializzato_su> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:comment "A manga is serialized in a specific magazine"@en ,
+                                                                               "Un manga è serializzato su una specifica rivista"@it ;
+                                                                  rdfs:label "Is serialized in"@en ,
+                                                                             "Serializzato su"@it .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> rdf:type owl:ObjectProperty ;
+                                                                  owl:inverseOf <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> ;
+                                                                  rdf:type owl:TransitiveProperty ;
+                                                                  rdfs:comment "A transitive relation expressing parthood between any entities, e.g. 'the human body has a brain as part'. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see 'componency'." ;
+                                                                  rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/partof.owl> ;
+                                                                  rdfs:label "has part"@en .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> rdf:type owl:ObjectProperty ,
+                                                                            owl:TransitiveProperty ;
+                                                                   rdfs:comment "A transitive relation expressing parthood between any entities, e.g. 'brain is a part of the human body'. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see 'componency'." ;
+                                                                   rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/partof.owl> ;
+                                                                   rdfs:label "is part of"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#numero_del_tankobon
+<http://modSem/miriam/ontologies/2020/mangaWorld#numero_del_tankobon> rdf:type owl:DatatypeProperty ,
+                                                                               owl:FunctionalProperty ;
+                                                                      rdfs:comment "A tankobon is a manga's specific volume such as 'Judge 1'"@en ,
+                                                                                   "Un tankobon è un volume specifico del manga come ad esempio 'Judge 1'"@it ;
+                                                                      rdfs:label "Numero del tankobon"@it ,
+                                                                                 "Tankobon's number"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_capitolo
+<http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_capitolo> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:comment "A chapter has a number that follows the cronological order"@en ,
+                                                                                  "Un capitolo ha un suo numero che segue l'ordine cronologico"@it ;
+                                                                     rdfs:label "Chapter's number"@en ,
+                                                                                "Numero del capitolo"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_volumi
+<http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_volumi> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:comment "A manga contains a certain number of tankobon"@en ,
+                                                                                "Un manga è composto da un certo numero di tankobon"@it ;
+                                                                   rdfs:label "Number of volumes"@en ,
+                                                                              "Numero di volumi"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#sottotitolo
+<http://modSem/miriam/ontologies/2020/mangaWorld#sottotitolo> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:comment "A manga could have a subtitle"@en ,
+                                                                           "Un manga può avere un sottotitolo"@it ;
+                                                              rdfs:label "Sottotitolo"@it ,
+                                                                         "Subtitle"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#stato_in_patria
+<http://modSem/miriam/ontologies/2020/mangaWorld#stato_in_patria> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:comment "A manga's series could be terminated or continuing"@en ,
+                                                                               "Una serie di manga può essere terminata oppure ancora in fase di pubblicazione"@it ;
+                                                                  rdfs:label "Stato in patria"@it ,
+                                                                             "Status"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#titolo
+<http://modSem/miriam/ontologies/2020/mangaWorld#titolo> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:comment "A manga could have different titles in different Nations, a chapter could have a title as well"@en ,
+                                                                      "Un manga ha titoli diversi a seconda della Nazione, anche un capitolo può avere un titolo"@it ;
+                                                         rdfs:label "Title"@en ,
+                                                                    "Titolo"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#titolo_originale
+<http://modSem/miriam/ontologies/2020/mangaWorld#titolo_originale> rdf:type owl:DatatypeProperty ,
+                                                                            owl:FunctionalProperty ;
+                                                                   rdfs:comment "A manga has a title in its original Nation"@en ,
+                                                                                "Un manga ha un titolo nella sua Nazione di origine"@it ;
+                                                                   rdfs:label "Original title"@en ,
+                                                                              "Titolo originale"@it .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate
+<http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:comment "A datatype property that encodes values from xsd:date (or any other date-related xsd datatype) for a TimeInterval; a same TimeInterval can have more than one date value: begin date, end date, date at which the interval holds, as well as dates expressed in different formats: xsd:gYear, xsd:dateTime, etc." ;
+                                                                                rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl> ;
+                                                                                rdfs:label "has interval date"@en ,
+                                                                                           "intervallo ha data"@it .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalEndDate
+<http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalEndDate> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate> ;
+                                                                                   rdf:type owl:FunctionalProperty ;
+                                                                                   rdfs:comment "The end date of a time interval." ;
+                                                                                   rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl> ;
+                                                                                   rdfs:label "interval has end date"@en .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate
+<http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate> rdf:type owl:DatatypeProperty ;
+                                                                                     rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate> ;
+                                                                                     rdf:type owl:FunctionalProperty ;
+                                                                                     rdfs:comment "The start date of a time interval." ;
+                                                                                     rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl> ;
+                                                                                     rdfs:label "interval has start date"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/ontology/Manga
+<http://dbpedia.org/ontology/Manga> rdf:type owl:Class ;
+                                    owl:equivalentClass <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> .
+
+
+###  http://https://www.wikidata.org/wiki/Q191633
+<http://https://www.wikidata.org/wiki/Q191633> rdf:type owl:Class ;
+                                               owl:equivalentClass <http://modSem/miriam/ontologies/2020/mangaWorld#Mangaka> ;
+                                               rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Persona> ,
+                                                               <http://xmlns.com/foaf/0.1/Person> ;
+                                               rdfs:label "mangaka"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Adolescente
+<http://modSem/miriam/ontologies/2020/mangaWorld#Adolescente> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Pubblico> ;
+                                                              owl:disjointWith <http://modSem/miriam/ontologies/2020/mangaWorld#Adulto> ,
+                                                                               <http://modSem/miriam/ontologies/2020/mangaWorld#Infantile> ;
+                                                              rdfs:comment "Il manga è rivolto agli adolescenti"@it ,
+                                                                           "The manga is aimed at the teenagers"@en ;
+                                                              rdfs:label "Adolescente"@it ,
+                                                                         "Teenager"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Adolescente_femminile
+<http://modSem/miriam/ontologies/2020/mangaWorld#Adolescente_femminile> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Adolescente> ;
+                                                                        owl:disjointWith <http://modSem/miriam/ontologies/2020/mangaWorld#Adolescente_maschile> ,
+                                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#Adulto> ,
+                                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#Infantile> ;
+                                                                        rdfs:comment "Il manga è rivolto alle ragazze adolescenti"@it ,
+                                                                                     "The manga is aimed at the teenager girls"@en ;
+                                                                        rdfs:label "Ragazze adolescenti"@it ,
+                                                                                   "Teenager girls"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Adolescente_maschile
+<http://modSem/miriam/ontologies/2020/mangaWorld#Adolescente_maschile> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Adolescente> ;
+                                                                       owl:disjointWith <http://modSem/miriam/ontologies/2020/mangaWorld#Adulto> ,
+                                                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#Infantile> ;
+                                                                       rdfs:comment "Il manga è rivolto ai ragazzi adolescenti"@it ,
+                                                                                    "The manga is aimed at the teenager boys"@en ;
+                                                                       rdfs:label "Ragazzi adolescenti"@it ,
+                                                                                  "Teenager boys"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Adulto
+<http://modSem/miriam/ontologies/2020/mangaWorld#Adulto> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Pubblico> ;
+                                                         owl:disjointWith <http://modSem/miriam/ontologies/2020/mangaWorld#Infantile> ;
+                                                         rdfs:comment "Il manga è rivolto agli adulti"@it ,
+                                                                      "The manga is aimed at the adults"@en ;
+                                                         rdfs:label "Adult"@en ,
+                                                                    "Adulto"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Amore_fisico
+<http://modSem/miriam/ontologies/2020/mangaWorld#Amore_fisico> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Sentimentale> ;
+                                                               owl:disjointWith <http://modSem/miriam/ontologies/2020/mangaWorld#Amore_platonico> ;
+                                                               rdfs:comment "Plot about love in a physical way"@en ,
+                                                                            "Trama riguardante un amore sviluppato sul piano fisico"@it ;
+                                                               rdfs:label "Amore fisico"@it ,
+                                                                          "Physical love"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Amore_omosessuale
+<http://modSem/miriam/ontologies/2020/mangaWorld#Amore_omosessuale> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Sentimentale> ;
+                                                                    rdfs:comment "Plot about omosexual love"@en ,
+                                                                                 "Trama riguardante l'amore omosessuale"@it ;
+                                                                    rdfs:label "Amore omosessuale"@it ,
+                                                                               "Omosexual love"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Amore_omosessuale_femminile
+<http://modSem/miriam/ontologies/2020/mangaWorld#Amore_omosessuale_femminile> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Amore_omosessuale> ;
+                                                                              owl:disjointWith <http://modSem/miriam/ontologies/2020/mangaWorld#Amore_omosessuale_maschile> ;
+                                                                              rdfs:comment "Plot about omosexual love between girls"@en ,
+                                                                                           "Trama riguardante l'amore omosessuale tra donne"@it ;
+                                                                              rdfs:label "Amore omosessuale femminile"@it ,
+                                                                                         "Girls omosexual love"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Amore_omosessuale_maschile
+<http://modSem/miriam/ontologies/2020/mangaWorld#Amore_omosessuale_maschile> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Amore_omosessuale> ;
+                                                                             rdfs:comment "Plot about omosexual love between boys"@en ,
+                                                                                          "Trama riguardante l'amore omosessuale tra uomini"@it ;
+                                                                             rdfs:label "Amore omosessuale maschile"@it ,
+                                                                                        "Boys omosexual love"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Amore_platonico
+<http://modSem/miriam/ontologies/2020/mangaWorld#Amore_platonico> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Sentimentale> ;
+                                                                  rdfs:comment "Plot about platonic love, without sexual references"@en ,
+                                                                               "Trama riguardante l'amore sviluppato in modo platonico, senza riferimenti sessuali"@it ;
+                                                                  rdfs:label "Amore platonico"@it ,
+                                                                             "Platonic love"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Azione
+<http://modSem/miriam/ontologies/2020/mangaWorld#Azione> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Genere> ;
+                                                         rdfs:comment "Genere di trama in cui i protagonisti devono affrontare una serie di sfide che richiedono coraggio e prodezza fisica"@it ,
+                                                                      "Plot's genre in which the main characters have to face challanges that requires bravery and physical prowess"@en ;
+                                                         rdfs:label "Action"@en ,
+                                                                    "Azione"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove
+<http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo
+<http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo> rdf:type owl:Class ;
+                                                           rdfs:comment "A manga's chapter"@en ,
+                                                                        "Capitolo di un manga"@it ;
+                                                           rdfs:label "Capitolo"@it ,
+                                                                      "Chapter"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Categoria
+<http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> rdf:type owl:Class ;
+                                                            rdfs:comment "Categoria di un manga come ad esempio shonen o shojo"@it ,
+                                                                         "Manga's category such as shonen or shojo"@en ;
+                                                            rdfs:label "Categoria"@it ,
+                                                                       "Category"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Contesto
+<http://modSem/miriam/ontologies/2020/mangaWorld#Contesto> rdf:type owl:Class ;
+                                                           rdfs:comment "Caratteristica di opere letterarie che riguarda l'ambiente in cui si svolge la trama"@it ,
+                                                                        "The environment where the plot  is developed"@en ;
+                                                           rdfs:label "Contesto"@it ,
+                                                                      "Context"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Fantastico
+<http://modSem/miriam/ontologies/2020/mangaWorld#Fantastico> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Contesto> ;
+                                                             rdfs:comment "Plot set in a fantastic world"@en ,
+                                                                          "Trama ambientata in un mondo fantastico"@it ;
+                                                             rdfs:label "Fantastic"@en ,
+                                                                        "Fantastico"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Genere
+<http://modSem/miriam/ontologies/2020/mangaWorld#Genere> rdf:type owl:Class ;
+                                                         rdfs:comment "Plot type of a literary work"@en ,
+                                                                      "Tipo di trama di un'opera letteraria"@it ;
+                                                         rdfs:label "Genere"@it ,
+                                                                    "Genre"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Global_manga
+<http://modSem/miriam/ontologies/2020/mangaWorld#Global_manga> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://dbpedia.org/ontology/Manga> ,
+                                                                               <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ;
+                                                               rdfs:comment "Global Manga"@it ,
+                                                                            "Manga created outside Japan"@en ,
+                                                                            "Manga creati al di fuori del Giappone"@it ;
+                                                               rdfs:label "Global manga"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Infantile
+<http://modSem/miriam/ontologies/2020/mangaWorld#Infantile> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Pubblico> ;
+                                                            rdfs:comment "Il manga è rivolto ai bambini"@it ,
+                                                                         "The manga is aimed at the children"@en ;
+                                                            rdfs:label "Children"@en ,
+                                                                       "Infantile"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Kodomo
+<http://modSem/miriam/ontologies/2020/mangaWorld#Kodomo> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ;
+                                                         owl:disjointWith <http://modSem/miriam/ontologies/2020/mangaWorld#Seinen> ,
+                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#Shojo> ,
+                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#Shonen> ;
+                                                         rdfs:comment "Categoria di manga per bambini"@it ,
+                                                                      "Manga's category for children"@en ;
+                                                         rdfs:label "Kodomo"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Magico
+<http://modSem/miriam/ontologies/2020/mangaWorld#Magico> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Genere> ;
+                                                         rdfs:comment "Plot about magic"@en ,
+                                                                      "Trama che riguarda la magia"@it ;
+                                                         rdfs:label "Magia"@it ,
+                                                                    "Magic"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Manga
+<http://modSem/miriam/ontologies/2020/mangaWorld#Manga> rdf:type owl:Class ;
+                                                        rdfs:comment "Comic or graphic novel originating from Japan"@en ,
+                                                                     "Fumetto di piccolo formato originario del Giappone"@it ;
+                                                        rdfs:label "Manga"@en ,
+                                                                   "Manga"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Manga_boysLove
+<http://modSem/miriam/ontologies/2020/mangaWorld#Manga_boysLove> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://dbpedia.org/ontology/Manga> ,
+                                                                                 <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ;
+                                                                 rdfs:comment "Manga about love between boys"@en ,
+                                                                              "Manga riguardante amore tra maschi"@it ;
+                                                                 rdfs:label "Boys love manga"@en ,
+                                                                            "Manga boys love"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Manga_con_volume_unico
+<http://modSem/miriam/ontologies/2020/mangaWorld#Manga_con_volume_unico> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Mini_serie> ;
+                                                                         rdfs:comment "Manga composto da un singolo tankobon"@it ,
+                                                                                      "Manga containing 1 single tankobon"@en ;
+                                                                         rdfs:label "Standalone manga"@en ,
+                                                                                    "Volume unico"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Manga_magazine
+<http://modSem/miriam/ontologies/2020/mangaWorld#Manga_magazine> rdf:type owl:Class ;
+                                                                 rdfs:comment "Magazine in which mangas are serialized"@en ,
+                                                                              "Rivista su cui vengono serializzati i manga"@it ;
+                                                                 rdfs:label "Manga magazine"@en ,
+                                                                            "Rivista di manga"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Manga_seinen
+<http://modSem/miriam/ontologies/2020/mangaWorld#Manga_seinen> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://dbpedia.org/ontology/Manga> ,
+                                                                               <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ;
+                                                               rdfs:comment "Manga di categoria seinen cioè per adulti"@it ,
+                                                                            "Seinen manga i.e. for adults"@en ;
+                                                               rdfs:label "Manga seinen"@it ,
+                                                                          "Seinen manga"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Manga_shojo
+<http://modSem/miriam/ontologies/2020/mangaWorld#Manga_shojo> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://dbpedia.org/ontology/Manga> ,
+                                                                              <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ;
+                                                              rdfs:comment "Manga di categoria shojo"@it ,
+                                                                           "Manga with shojo category"@en ;
+                                                              rdfs:label "Manga shojo"@it ,
+                                                                         "Shojo manga"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Manga_shonen
+<http://modSem/miriam/ontologies/2020/mangaWorld#Manga_shonen> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://dbpedia.org/ontology/Manga> ,
+                                                                               <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ;
+                                                               rdfs:comment "Manga di categoria shonen"@it ,
+                                                                            "Manga with shonen category"@en ;
+                                                               rdfs:label "Manga shonen"@it ,
+                                                                          "Shonen manga"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Mangaka
+<http://modSem/miriam/ontologies/2020/mangaWorld#Mangaka> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Persona> ,
+                                                                          <http://xmlns.com/foaf/0.1/Person> ;
+                                                          rdfs:comment "Person who write or draw manga"@en ,
+                                                                       "Persona che scrive o disegna manga"@it ;
+                                                          rdfs:label "Mangaka"@en ,
+                                                                     "Mangaka"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Mini_serie
+<http://modSem/miriam/ontologies/2020/mangaWorld#Mini_serie> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://dbpedia.org/ontology/Manga> ,
+                                                                             <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ;
+                                                             rdfs:comment "A series of manga containing less than 6 tankobon"@en ,
+                                                                          "Una serie di manga che contiene meno di 6 tankobon"@it ;
+                                                             rdfs:label "Mini serie"@en ,
+                                                                        "Mini serie"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Nazione
+<http://modSem/miriam/ontologies/2020/mangaWorld#Nazione> rdf:type owl:Class ;
+                                                          rdfs:comment "Area geografica ben definita, su cui si diffonde la sovranità"@it ,
+                                                                       "Well-defined geographical area, over which sovereignty spreads"@en ;
+                                                          rdfs:label "Nation"@en ,
+                                                                     "Nazione"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Nazione_giapponese
+<http://modSem/miriam/ontologies/2020/mangaWorld#Nazione_giapponese> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Nazione> ;
+                                                                     owl:disjointWith <http://modSem/miriam/ontologies/2020/mangaWorld#Nazione_non_giapponese> ;
+                                                                     rdfs:comment "Giappone"@it ,
+                                                                                  "Japan"@en ;
+                                                                     rdfs:label "Japanese nation"@en ,
+                                                                                "Nazione giapponese"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Nazione_non_giapponese
+<http://modSem/miriam/ontologies/2020/mangaWorld#Nazione_non_giapponese> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Nazione> ;
+                                                                         rdfs:comment "Any nation but Japan"@en ,
+                                                                                      "Qualsiasi nazione che non sia il Giappone"@it ;
+                                                                         rdfs:label "Nazione non giapponese"@it ,
+                                                                                    "Non-Japanese nation"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Persona
+<http://modSem/miriam/ontologies/2020/mangaWorld#Persona> rdf:type owl:Class ;
+                                                          owl:equivalentClass <http://xmlns.com/foaf/0.1/Person> ;
+                                                          rdfs:comment "A person"@en ,
+                                                                       "Una persona"@it ;
+                                                          rdfs:label "Person"@en ,
+                                                                     "Persona"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Pubblico
+<http://modSem/miriam/ontologies/2020/mangaWorld#Pubblico> rdf:type owl:Class ;
+                                                           rdfs:comment "Gruppo di consumatori per cui è pensata una certa categoria di manga"@it ,
+                                                                        "Intended audience or readership of a publication"@en ;
+                                                           rdfs:label "Pubblico"@it ,
+                                                                      "Target audience"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Scolastico
+<http://modSem/miriam/ontologies/2020/mangaWorld#Scolastico> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Contesto> ;
+                                                             rdfs:comment "Plot set in a scholastic context"@en ,
+                                                                          "Trama ambientata in un contesto scolastico"@it ;
+                                                             rdfs:label "Scholastic"@en ,
+                                                                        "Scolastico"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Seinen
+<http://modSem/miriam/ontologies/2020/mangaWorld#Seinen> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ;
+                                                         owl:disjointWith <http://modSem/miriam/ontologies/2020/mangaWorld#Shojo> ,
+                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#Shonen> ;
+                                                         rdfs:comment "Categoria di manga per adulti"@it ,
+                                                                      "Manga's category for adults"@en ;
+                                                         rdfs:label "Seinen"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Sentimentale
+<http://modSem/miriam/ontologies/2020/mangaWorld#Sentimentale> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Genere> ;
+                                                               rdfs:comment "Sentimental plot"@en ,
+                                                                            "Trama sentimentale"@it ;
+                                                               rdfs:label "Sentimental"@en ,
+                                                                          "Sentimentale"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Serie_lunga
+<http://modSem/miriam/ontologies/2020/mangaWorld#Serie_lunga> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://dbpedia.org/ontology/Manga> ,
+                                                                              <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ;
+                                                              rdfs:comment "A series of manga containing at least 6 tankobon"@en ,
+                                                                           "Serie di manga che contiene almeno 6 tankobon"@it ;
+                                                              rdfs:label "Long series"@en ,
+                                                                         "Serie lunga"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Shojo
+<http://modSem/miriam/ontologies/2020/mangaWorld#Shojo> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ;
+                                                        owl:disjointWith <http://modSem/miriam/ontologies/2020/mangaWorld#Shonen> ;
+                                                        rdfs:comment "Categoria di manga per ragazze adolescenti con trama sentimentale ed ambientato in un contesto scolastico o fantastico"@it ,
+                                                                     "Manga's category for teen girls with sentimental plot and set in a school or fantastic environment"@en ;
+                                                        rdfs:label "Shojo"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Shojo-ai
+<http://modSem/miriam/ontologies/2020/mangaWorld#Shojo-ai> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ;
+                                                           rdfs:comment "Categoria di manga che tratta amore platonico tra donne"@it ,
+                                                                        "Manga's category in which love between girls is seen in a platonical way"@en ;
+                                                           rdfs:label "Shojo - ai"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Shonen
+<http://modSem/miriam/ontologies/2020/mangaWorld#Shonen> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ;
+                                                         rdfs:comment "Categoria di manga per ragazzi adolescenti con trama d'azione ed ambientato in un contesto sportivo o fantastico"@it ,
+                                                                      "Manga's category for teen boys with action plot and set in a sportive or fantastic environment"@en ;
+                                                         rdfs:label "Shonen"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Shonen-ai
+<http://modSem/miriam/ontologies/2020/mangaWorld#Shonen-ai> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> ;
+                                                            rdfs:comment "Categoria di manga in cui l'amore tra uomini è visto in modo platonico"@it ,
+                                                                         "Manga's category in which love between males is seen in a platonical way"@en ;
+                                                            rdfs:label "Shonen - ai"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Sportivo
+<http://modSem/miriam/ontologies/2020/mangaWorld#Sportivo> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Contesto> ;
+                                                           rdfs:comment "Plot set in a sports context"@en ,
+                                                                        "Trama ambientata in un contesto sportivo"@it ;
+                                                           rdfs:label "Sportivo"@it ,
+                                                                      "Sports"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Tankobon
+<http://modSem/miriam/ontologies/2020/mangaWorld#Tankobon> rdf:type owl:Class ;
+                                                           rdfs:comment "A manga's volume that contains several chapters"@en ,
+                                                                        "Singolo volume di un manga che raccoglie alcuni capitoli"@it ;
+                                                           rdfs:label "Tankobon"@en ,
+                                                                      "Tankobon"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Yaoi
+<http://modSem/miriam/ontologies/2020/mangaWorld#Yaoi> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> ;
+                                                       rdfs:comment "Categoria di manga in cui l'amore tra uomini è visto in modo fisico"@it ,
+                                                                    "Manga's category in which love between males is seen in a physical way"@en ;
+                                                       rdfs:label "Yaoi"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Yuri
+<http://modSem/miriam/ontologies/2020/mangaWorld#Yuri> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ;
+                                                       rdfs:comment "Categoria di manga in cui l'amore tra donne è visto in modo fisico"@it ,
+                                                                    "Manga's category in which love between girls is seen in a physical way"@en ;
+                                                       rdfs:label "Yuri"@it .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval
+<http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> rdf:type owl:Class ;
+                                                                             rdfs:comment """Any Region in a dimensional space that aims at representing time.
+It should be used when you want to talk about time as an object having some characteristics."""^^xsd:string ;
+                                                                             rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl> ;
+                                                                             rdfs:label "Intervallo di tempo"@it ,
+                                                                                        "Time interval"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove
+<http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> rdf:type owl:NamedIndividual ,
+                                                                    owl:Class ,
+                                                                    <http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> ,
+                                                                    <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo1Wizdoms
+<http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo1Wizdoms> rdf:type owl:NamedIndividual ,
+                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_tankobon> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms> ,
+                                                                                                                                      <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_capitolo> "1"^^xsd:nonNegativeInteger ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Alan & Eddington - Il genio e il signor nessuno"@it ;
+                                                                   rdfs:comment "Capitolo 1 di Wizdoms riguardante Alan e Eddington"@it ,
+                                                                                "Wizdoms chapter 1 about Alan and Eddington"@en ;
+                                                                   rdfs:label "Capitolo 1 di Wizdoms"@it ,
+                                                                              "Wizdoms chapter 1"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo2Wizdoms
+<http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo2Wizdoms> rdf:type owl:NamedIndividual ,
+                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_tankobon> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms> ,
+                                                                                                                                      <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_capitolo> 2 ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Florio & Nicol - Preda e predatore"@it ;
+                                                                   rdfs:comment "Capitolo 2 di Wizdoms riguardante Florio e Nicol"@it ,
+                                                                                "Wizdoms chapter 2 about Florio and Nicol"@en ;
+                                                                   rdfs:label "Capitolo 2 di Wizdoms"@it ,
+                                                                              "Wizdoms chapter 2"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo3Wizdoms
+<http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo3Wizdoms> rdf:type owl:NamedIndividual ,
+                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_tankobon> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms> ,
+                                                                                                                                      <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_capitolo> 3 ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Fermat & Emil - Maestro e allievo"@it ;
+                                                                   rdfs:comment "Capitolo 3 di Wizoms riguardante Fermat ed Emil"@it ,
+                                                                                "Wizdoms chapter 3 about Fermat and Emil"@en ;
+                                                                   rdfs:label "Capitolo 3 di Wizdoms"@it ,
+                                                                              "Wizdoms chapter 3"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo4Wizdoms
+<http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo4Wizdoms> rdf:type owl:NamedIndividual ,
+                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_tankobon> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms> ,
+                                                                                                                                      <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_capitolo> 4 ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Marley & Collette - Sangue caldo e sangue freddo"@it ;
+                                                                   rdfs:comment "Capitolo 4 di Wizdoms riguardante Marley e Collette"@it ,
+                                                                                "Wizdoms chapter 4 about Marley and Collette"@en ;
+                                                                   rdfs:label "Capitolo 4 di Wizdoms"@it ,
+                                                                              "Wizdoms chapter 4"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo5Wizdoms
+<http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo5Wizdoms> rdf:type owl:NamedIndividual ,
+                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_tankobon> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms> ,
+                                                                                                                                      <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_capitolo> 5 ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Doug & Huei - Corteggiamento e amicizia"@it ;
+                                                                   rdfs:comment "Capitolo 5 di Wizdoms riguardante Doug ed Huei"@it ,
+                                                                                "Wizdoms chapter 5 about Doug and Huei"@en ;
+                                                                   rdfs:label "Capitolo 5 di Wizdoms"@it ,
+                                                                              "Wizdoms chapter 5"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo6Wizdoms
+<http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo6Wizdoms> rdf:type owl:NamedIndividual ,
+                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_tankobon> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms> ,
+                                                                                                                                      <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_capitolo> 6 ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Allhoff & Carreras - Esca e gioco"@it ;
+                                                                   rdfs:comment "Capitolo 6 di Wizdoms riguardante Allhoff e Carreras"@it ,
+                                                                                "Wizdos chapter 6 about Allhoff and Carreras"@en ;
+                                                                   rdfs:label "Capitolo 6 di Wizdoms"@it ,
+                                                                              "Wizdoms chapter 6"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo7Wizdoms
+<http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo7Wizdoms> rdf:type owl:NamedIndividual ,
+                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_tankobon> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms> ,
+                                                                                                                                      <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_capitolo> 7 ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Cromwell & Benjamin - Oratore e ascoltatore"@it ;
+                                                                   rdfs:comment "Capitolo 7 di Wizdoms riguardante Cromwell e Benjamin"@it ,
+                                                                                "Wizdoms chapter 7 about Cromwell and Benjamin"@en ;
+                                                                   rdfs:label "Capitolo 7 di Wizdoms"@it ,
+                                                                              "Wizdoms chapter 7"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo8Wizdoms
+<http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo8Wizdoms> rdf:type owl:NamedIndividual ,
+                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_tankobon> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms> ,
+                                                                                                                                      <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_capitolo> 8 ;
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Mauchly & Charles - La bestia e l'uomo"@it ;
+                                                                   rdfs:comment "Capitolo 8 di Wizdoms riguardante Mauchly e Charles"@it ,
+                                                                                "Wizdoms chapter 8 about Mauchly and Charles"@en ;
+                                                                   rdfs:label "Capitolo8 di Wizdoms"@it ,
+                                                                              "Wizdoms chapter 8"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Doubt
+<http://modSem/miriam/ontologies/2020/mangaWorld#Doubt> rdf:type owl:NamedIndividual ,
+                                                                 <http://dbpedia.org/ontology/Manga> ,
+                                                                 <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ,
+                                                                 <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_shonen> ,
+                                                                 <http://modSem/miriam/ontologies/2020/mangaWorld#Mini_serie> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#disegnata_da> <http://modSem/miriam/ontologies/2020/mangaWorld#YoshikiTonogai> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#categoria_doubt> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#scritta_da> <http://modSem/miriam/ontologies/2020/mangaWorld#YoshikiTonogai> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_volumi> 4 ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#stato_in_patria> "Completato"^^xsd:string ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Doubt"@it ;
+                                                        rdfs:comment "Manga intitolato \"Doubt\""@it ,
+                                                                     "Manga named \"Doubt\""@en ;
+                                                        rdfs:label "Doubt"@en ,
+                                                                   "Doubt"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Giappone
+<http://modSem/miriam/ontologies/2020/mangaWorld#Giappone> rdf:type owl:NamedIndividual ,
+                                                                    <http://modSem/miriam/ontologies/2020/mangaWorld#Nazione> ,
+                                                                    <http://modSem/miriam/ontologies/2020/mangaWorld#Nazione_giapponese> ;
+                                                           rdfs:comment "Japanese nation"@en ,
+                                                                        "Nazione giapponese"@it ;
+                                                           rdfs:label "Giappone"@it ,
+                                                                      "Japan"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Girl_from_the_other_side
+<http://modSem/miriam/ontologies/2020/mangaWorld#Girl_from_the_other_side> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/Manga> ,
+                                                                                    <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ;
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#disegnata_da> <http://modSem/miriam/ontologies/2020/mangaWorld#Nagabe> ;
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#categoria_girl_from> ;
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#manga_ha_contesto> <http://modSem/miriam/ontologies/2020/mangaWorld#contesto_fantastico> ;
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#nazione_di_origine> <http://modSem/miriam/ontologies/2020/mangaWorld#Giappone> ;
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#pubblicata_nel_periodo> <http://modSem/miriam/ontologies/2020/mangaWorld#tempo_girl_from> ;
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#scritta_da> <http://modSem/miriam/ontologies/2020/mangaWorld#Nagabe> ;
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#serializzato_su> <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_blade> ;
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#sottotitolo> "Siúil, a Rún"@en ,
+                                                                                                                                         "Siúil, a Rún"@it ;
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#stato_in_patria> "In corso"^^xsd:string ;
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Girl from the other side"@it ;
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#titolo_originale> "Totsukuni no Shōjo"@ja ;
+                                                                           rdfs:comment "Manga intolato \"Girl from the other side\""@it ,
+                                                                                        "Manga named \"The girl from the other side\""@en ;
+                                                                           rdfs:label "Girl from the other side"@it ,
+                                                                                      "The girl from the other side"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Judge
+<http://modSem/miriam/ontologies/2020/mangaWorld#Judge> rdf:type owl:NamedIndividual ,
+                                                                 <http://dbpedia.org/ontology/Manga> ,
+                                                                 <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ,
+                                                                 <http://modSem/miriam/ontologies/2020/mangaWorld#Serie_lunga> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#disegnata_da> <http://modSem/miriam/ontologies/2020/mangaWorld#YoshikiTonogai> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#has_tankobon> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge1> ,
+                                                                                                                       <http://modSem/miriam/ontologies/2020/mangaWorld#Judge2> ,
+                                                                                                                       <http://modSem/miriam/ontologies/2020/mangaWorld#Judge3> ,
+                                                                                                                       <http://modSem/miriam/ontologies/2020/mangaWorld#Judge4> ,
+                                                                                                                       <http://modSem/miriam/ontologies/2020/mangaWorld#Judge5> ,
+                                                                                                                       <http://modSem/miriam/ontologies/2020/mangaWorld#Judge6> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#scritta_da> <http://modSem/miriam/ontologies/2020/mangaWorld#YoshikiTonogai> ;
+                                                        <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge1> ,
+                                                                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#Judge2> ,
+                                                                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#Judge3> ,
+                                                                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#Judge4> ,
+                                                                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#Judge5> ,
+                                                                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#Judge6> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#stato_in_patria> "Completato"^^xsd:string ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Judge"@it ;
+                                                        rdfs:comment "Manga intitolato \"Judge\""@it ,
+                                                                     "Manga named \"Judge\""@en ;
+                                                        rdfs:label "Judge"@en ,
+                                                                   "Judge"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Judge1
+<http://modSem/miriam/ontologies/2020/mangaWorld#Judge1> rdf:type owl:NamedIndividual ,
+                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Tankobon> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_manga> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                         <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#numero_del_tankobon> "1"^^xsd:nonNegativeInteger ;
+                                                         rdfs:comment "Number 1 tankobon of manga \"Judge\""@en ,
+                                                                      "Tankobon numero 1 del manga \"Judge\""@it ;
+                                                         rdfs:label "Judge 1"@en ,
+                                                                    "Judge 1"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Judge2
+<http://modSem/miriam/ontologies/2020/mangaWorld#Judge2> rdf:type owl:NamedIndividual ,
+                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Tankobon> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_manga> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                         <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#numero_del_tankobon> 2 ;
+                                                         rdfs:comment "Number 2 tankobon of manga \"Judge\""@en ,
+                                                                      "Tankobon numero 2 del manga \"Judge\""@it ;
+                                                         rdfs:label "Judge 2"@en ,
+                                                                    "Judge 2"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Judge3
+<http://modSem/miriam/ontologies/2020/mangaWorld#Judge3> rdf:type owl:NamedIndividual ,
+                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Tankobon> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_manga> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                         <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#numero_del_tankobon> 3 ;
+                                                         rdfs:comment "Number 3 tankobon of manga \"Judge\""@en ,
+                                                                      "Tankobon numero 3 del manga \"Judge\""@it ;
+                                                         rdfs:label "Judge 3"@en ,
+                                                                    "Judge 3"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Judge4
+<http://modSem/miriam/ontologies/2020/mangaWorld#Judge4> rdf:type owl:NamedIndividual ,
+                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Tankobon> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_manga> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                         <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#numero_del_tankobon> 4 ;
+                                                         rdfs:comment "Number 4 tankobon of manga \"Judge\""@en ,
+                                                                      "Tankobon numero 4 del manga \"Judge\""@it ;
+                                                         rdfs:label "Judge 4"@en ,
+                                                                    "Judge 4"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Judge5
+<http://modSem/miriam/ontologies/2020/mangaWorld#Judge5> rdf:type owl:NamedIndividual ,
+                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Tankobon> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_manga> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                         <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#numero_del_tankobon> 5 ;
+                                                         rdfs:comment "Number 5 tankobon of manga \"Judge\""@en ,
+                                                                      "Tankobon numero 5 del manga \"Judge\""@it ;
+                                                         rdfs:label "Judge 5"@en ,
+                                                                    "Judge 5"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Judge6
+<http://modSem/miriam/ontologies/2020/mangaWorld#Judge6> rdf:type owl:NamedIndividual ,
+                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Tankobon> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_manga> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                         <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#numero_del_tankobon> 6 ;
+                                                         rdfs:comment "Number 6 tankobon of manga \"Judge\""@en ,
+                                                                      "Tankobon numero 6 del manga \"Judge\""@it ;
+                                                         rdfs:label "Judge 6"@en ,
+                                                                    "Judge 6"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Manga_blade
+<http://modSem/miriam/ontologies/2020/mangaWorld#Manga_blade> rdf:type owl:NamedIndividual ,
+                                                                       <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_magazine> ;
+                                                              <http://modSem/miriam/ontologies/2020/mangaWorld#magazine_ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#shonen> ;
+                                                              rdfs:comment "Rivista di manga shonen chiamata Manga Blade"@it ,
+                                                                           "Shonen manga magazine named Manga Blade"@en ;
+                                                              rdfs:label "Manga Blade"@en ,
+                                                                         "Manga Blade"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Nagabe
+<http://modSem/miriam/ontologies/2020/mangaWorld#Nagabe> rdf:type owl:NamedIndividual ,
+                                                                  <http://https://www.wikidata.org/wiki/Q191633> ,
+                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Mangaka> ,
+                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Persona> ,
+                                                                  <http://xmlns.com/foaf/0.1/Person> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#disegna> <http://modSem/miriam/ontologies/2020/mangaWorld#Girl_from_the_other_side> ,
+                                                                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms> ;
+                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#scrive> <http://modSem/miriam/ontologies/2020/mangaWorld#Girl_from_the_other_side> ,
+                                                                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms> ;
+                                                         rdfs:comment "Mangaka di nome Nagabe"@it ,
+                                                                      "Mangaka named Nagabe"@en ;
+                                                         rdfs:label "Nagabe"@en ,
+                                                                    "Nagabe"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Opera
+<http://modSem/miriam/ontologies/2020/mangaWorld#Opera> rdf:type owl:NamedIndividual ,
+                                                                 <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_magazine> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#magazine_ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> ;
+                                                        rdfs:comment "Boys Love manga magazine named \"Opera\""@en ,
+                                                                     "Rivista di manga Boys love chiamata \"Opera\""@it ;
+                                                        rdfs:label "Opera"@en ,
+                                                                   "Opera"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#PenguinRumble
+<http://modSem/miriam/ontologies/2020/mangaWorld#PenguinRumble> rdf:type owl:NamedIndividual ,
+                                                                         <http://dbpedia.org/ontology/Manga> ,
+                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#Global_manga> ,
+                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ,
+                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#Mini_serie> ;
+                                                                <http://modSem/miriam/ontologies/2020/mangaWorld#nazione_di_origine> <http://modSem/miriam/ontologies/2020/mangaWorld#Svezia> ;
+                                                                <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_volumi> 4 ;
+                                                                <http://modSem/miriam/ontologies/2020/mangaWorld#stato_in_patria> "Completato"^^xsd:string ;
+                                                                <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Penguin Rumble"@it ;
+                                                                <http://modSem/miriam/ontologies/2020/mangaWorld#titolo_originale> "Penguin Rumble"@sw ;
+                                                                rdfs:comment "Manga intitolato \"Penguin Rumble\""@it ,
+                                                                             "Manga named \"Penguin Rumble\""@en ;
+                                                                rdfs:label "Penguin Rumble"@en ,
+                                                                           "Penguin Rumble"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Svezia
+<http://modSem/miriam/ontologies/2020/mangaWorld#Svezia> rdf:type owl:NamedIndividual ,
+                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Nazione> ,
+                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Nazione_non_giapponese> ;
+                                                         rdfs:comment "Nazione Svedese"@it ,
+                                                                      "Swedish Nation"@en ;
+                                                         rdfs:label "Svezia"@it ,
+                                                                    "Sweden"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms
+<http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms> rdf:type owl:NamedIndividual ,
+                                                                   <http://dbpedia.org/ontology/Manga> ,
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ,
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_boysLove> ,
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_con_volume_unico> ,
+                                                                   <http://modSem/miriam/ontologies/2020/mangaWorld#Mini_serie> ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#disegnata_da> <http://modSem/miriam/ontologies/2020/mangaWorld#Nagabe> ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#categoria_wizdoms> ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#has_tankobon> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#manga_ha_contesto> <http://modSem/miriam/ontologies/2020/mangaWorld#contesto_fantastico> ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#nazione_di_origine> <http://modSem/miriam/ontologies/2020/mangaWorld#Giappone> ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#scritta_da> <http://modSem/miriam/ontologies/2020/mangaWorld#Nagabe> ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#serializzato_su> <http://modSem/miriam/ontologies/2020/mangaWorld#Opera> ;
+                                                          <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo1Wizdoms> ,
+                                                                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo2Wizdoms> ,
+                                                                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo3Wizdoms> ,
+                                                                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo4Wizdoms> ,
+                                                                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo5Wizdoms> ,
+                                                                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo6Wizdoms> ,
+                                                                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo7Wizdoms> ,
+                                                                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo8Wizdoms> ,
+                                                                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_volumi> "1"^^xsd:nonNegativeInteger ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#sottotitolo> "The Wize Wize Beasts of the Wizarding Wizdoms"@it ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#stato_in_patria> "Completato"^^xsd:string ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "The Wize Wize Beasts of the Wizarding Wizdoms"@en ,
+                                                                                                                   "Wizdoms"@it ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#titolo_originale> "Wizdoms no Kemonotachi"@ja ;
+                                                          rdfs:comment "Manga intitolato \"Wizdoms\""@it ,
+                                                                       "Manga named \"The Wize Wize Beasts of the Wizarding Wizdoms\""@en ;
+                                                          rdfs:label "The Wize Wize Beasts of the Wizarding Wizdoms"@en ,
+                                                                     "Wizdoms"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1
+<http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> rdf:type owl:NamedIndividual ,
+                                                                    <http://modSem/miriam/ontologies/2020/mangaWorld#Tankobon> ;
+                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#has_chapter> <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo1Wizdoms> ,
+                                                                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo2Wizdoms> ,
+                                                                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo3Wizdoms> ,
+                                                                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo4Wizdoms> ,
+                                                                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo5Wizdoms> ,
+                                                                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo6Wizdoms> ,
+                                                                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo7Wizdoms> ,
+                                                                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo8Wizdoms> ;
+                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#is_part_of_manga> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms> ;
+                                                           <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo1Wizdoms> ,
+                                                                                                                             <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo2Wizdoms> ,
+                                                                                                                             <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo3Wizdoms> ,
+                                                                                                                             <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo4Wizdoms> ,
+                                                                                                                             <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo5Wizdoms> ,
+                                                                                                                             <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo6Wizdoms> ,
+                                                                                                                             <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo7Wizdoms> ,
+                                                                                                                             <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo8Wizdoms> ;
+                                                           <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms> ;
+                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#numero_del_tankobon> "1"^^xsd:nonNegativeInteger ;
+                                                           rdfs:comment "Single tankobon of manga \"The Wize Wize Beasts of the Wizarding Wizdoms\""@en ,
+                                                                        "Volume unico del manga \"Wizdoms\""@it ;
+                                                           rdfs:label "The Wize Wize Beasts of the Wizarding Wizdoms"@en ,
+                                                                      "Wizdoms"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#YoshikiTonogai
+<http://modSem/miriam/ontologies/2020/mangaWorld#YoshikiTonogai> rdf:type owl:NamedIndividual ,
+                                                                          <http://https://www.wikidata.org/wiki/Q191633> ,
+                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#Mangaka> ,
+                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#Persona> ,
+                                                                          <http://xmlns.com/foaf/0.1/Person> ;
+                                                                 <http://modSem/miriam/ontologies/2020/mangaWorld#disegna> <http://modSem/miriam/ontologies/2020/mangaWorld#Doubt> ,
+                                                                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                                 <http://modSem/miriam/ontologies/2020/mangaWorld#scrive> <http://modSem/miriam/ontologies/2020/mangaWorld#Doubt> ,
+                                                                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> ;
+                                                                 rdfs:comment "Mangaka di nome Yoshiki Tonogai"@it ,
+                                                                              "Mangaka named Yoshiki Tonogai"@en ;
+                                                                 rdfs:label "Yoshiki Tonogai"@en ,
+                                                                            "Yoshiki Tonogai"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#amore_omo_maschile
+<http://modSem/miriam/ontologies/2020/mangaWorld#amore_omo_maschile> rdf:type owl:NamedIndividual ,
+                                                                              <http://modSem/miriam/ontologies/2020/mangaWorld#Amore_omosessuale> ,
+                                                                              <http://modSem/miriam/ontologies/2020/mangaWorld#Amore_omosessuale_maschile> ,
+                                                                              <http://modSem/miriam/ontologies/2020/mangaWorld#Genere> ,
+                                                                              <http://modSem/miriam/ontologies/2020/mangaWorld#Sentimentale> ;
+                                                                     rdfs:comment "Plot about omosexual boys love"@en ,
+                                                                                  "Trama con genere amore omosessuale maschile"@it ;
+                                                                     rdfs:label "Amore omosessuale maschile"@it ,
+                                                                                "Boys omosexual love"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#amore_platonico
+<http://modSem/miriam/ontologies/2020/mangaWorld#amore_platonico> rdf:type owl:NamedIndividual ,
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Amore_platonico> ,
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Genere> ,
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Sentimentale> ;
+                                                                  rdfs:comment "Plot about platonic love"@en ,
+                                                                               "Trama riguardante l'amore platonico"@it ;
+                                                                  rdfs:label "Amore platonico"@it ,
+                                                                             "Platonic love"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#categoria_doubt
+<http://modSem/miriam/ontologies/2020/mangaWorld#categoria_doubt> rdf:type owl:NamedIndividual ,
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ,
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Shonen> ;
+                                                                  rdfs:comment "Categoria del manga 'Doubt'"@it ,
+                                                                               "Category of the manga called 'Doubt'"@en ;
+                                                                  rdfs:label "Categoria di Doubt"@it ,
+                                                                             "Doubt's category"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#categoria_girl_from
+<http://modSem/miriam/ontologies/2020/mangaWorld#categoria_girl_from> rdf:type owl:NamedIndividual ,
+                                                                               <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ;
+                                                                      <http://modSem/miriam/ontologies/2020/mangaWorld#ambientata_in_contesto> <http://modSem/miriam/ontologies/2020/mangaWorld#contesto_fantastico> ;
+                                                                      rdfs:comment "Categoria del manga 'Girl from the other side'"@it ,
+                                                                                   "Category of the manga called 'Girl from the other side'"@en ;
+                                                                      rdfs:label "Categoria di Girl from the other side"@it ,
+                                                                                 "Category of Girl from the other side"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#categoria_wizdoms
+<http://modSem/miriam/ontologies/2020/mangaWorld#categoria_wizdoms> rdf:type owl:NamedIndividual ,
+                                                                             <http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> ,
+                                                                             <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ,
+                                                                             <http://modSem/miriam/ontologies/2020/mangaWorld#Shonen-ai> ;
+                                                                    <http://modSem/miriam/ontologies/2020/mangaWorld#ambientata_in_contesto> <http://modSem/miriam/ontologies/2020/mangaWorld#contesto_fantastico> ;
+                                                                    <http://modSem/miriam/ontologies/2020/mangaWorld#ha_genere> <http://modSem/miriam/ontologies/2020/mangaWorld#amore_omo_maschile> ,
+                                                                                                                                <http://modSem/miriam/ontologies/2020/mangaWorld#amore_platonico> ;
+                                                                    rdfs:comment "Categoria del manga 'Wizdoms'"@it ,
+                                                                                 "Category of the manga called ' Wizdoms'"@en ;
+                                                                    rdfs:label "Categoria di Wizdoms"@it ,
+                                                                               "Wizdoms category"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#contesto_fantastico
+<http://modSem/miriam/ontologies/2020/mangaWorld#contesto_fantastico> rdf:type owl:NamedIndividual ,
+                                                                               <http://modSem/miriam/ontologies/2020/mangaWorld#Contesto> ,
+                                                                               <http://modSem/miriam/ontologies/2020/mangaWorld#Fantastico> ;
+                                                                      rdfs:comment "Plot set in fantastic context"@en ,
+                                                                                   "Trama ambientata in un contesto fantastico"@it ;
+                                                                      rdfs:label "Contesto Fantastico"@it ,
+                                                                                 "Fantastic context"@en .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#shonen
+<http://modSem/miriam/ontologies/2020/mangaWorld#shonen> rdf:type owl:NamedIndividual ,
+                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ,
+                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Shonen> ;
+                                                         rdfs:comment "Categoria di manga per ragazzi adolescenti con trama d'azione ed ambientato in un contesto sportivo o fantastico"@it ,
+                                                                      "Manga's category for teen boys with action plot and set in a sportive or fantastic environment"@en ;
+                                                         rdfs:label "Shonen"@en ,
+                                                                    "Shonen"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#tempo_girl_from
+<http://modSem/miriam/ontologies/2020/mangaWorld#tempo_girl_from> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> ;
+                                                                  <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate> 2015 ;
+                                                                  <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate> 2015 ;
+                                                                  rdfs:comment "Periodo in cui è stato pubblicato il manga \"Girl From The Other Side\""@it ,
+                                                                               "When \"The Girl From the Other Side\" was published"@en ;
+                                                                  rdfs:label "Publication time of The girl from the other side"@en ,
+                                                                             "Tempo di pubblicazione di Girl From The Other Side"@it .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> rdfs:comment "Categoria di manga in cui la storia riguarda l'amore tra maschi"@it ;
+                                                           rdfs:label "Boys love"@en ;
+                                                           rdfs:comment "Manga's category in which the story is about male gay love"@en .
+
+
+<http://modSem/miriam/ontologies/2020/mangaWorld#orientata_a_pubblico> rdfs:label "Orientata ad un pubblico"@it ,
+                                                                                  "Aimed at audience"@en ;
+                                                                       rdfs:comment "A manga's category is aimed at a specific audience"@en ,
+                                                                                    "Una categoria è orientata verso uno specifico pubblico"@it .
+
+
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasComponent> rdfs:comment "This annotation property is useful for content ontology design patterns. Its value is a URI, which refers to another content ontology design pattern which is a component of the annotated one." .
+
+
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasUnitTest> rdfs:comment "This property can be used to annotate a unit test (e.g. in the form of a SPARQL query) to be launched to evaluate an ontology against a requirement-based task." .
+
+
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#isCloneOf> rdfs:comment "This annotation property is used for referring a cloned ontology entity to its cloning source." .
+
+
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#isSpecializationOf> rdfs:comment "This annotation property is useful for content ontology design patterns and its elements. Its value is a URI, which refers either to a content ontology design pattern that is specialized by the annotated one, or to an ontology element that is specialized by the annotated one." .
+
+
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#reengineeredFrom> rdfs:comment "This annotation property should be assigned with a URI, which points to the concept schema, page, or anything else from which the annotated pattern was reengineered.  If the source does not have any URI e.g., a printed book, this property value should provide information as precise as possible in order to identify the source. This property is alternative to the extractedFrom property because it is used when the pattern come from a concept schema which is not an owl ontology. For example content ontology design patterns, which are reengineered from data model patterns, rdf schemas, etc. should be annotatd with this property. E.g. The basicpersonalfoaf pattern is extracted from the rdf FOAF specification, hence the value for this annotation property is http://xmlns.com/foaf/spec/20071002.rdf" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
