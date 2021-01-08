@@ -913,11 +913,11 @@ It should be used when you want to talk about time as an object having some char
 <http://modSem/miriam/ontologies/2020/mangaWorld#Doubt> rdf:type owl:NamedIndividual ,
                                                                  <http://dbpedia.org/ontology/Manga> ,
                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ,
-                                                                 <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_shonen> ,
                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Mini_serie> ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#disegnata_da> <http://modSem/miriam/ontologies/2020/mangaWorld#YoshikiTonogai> ;
-                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#categoria_doubt> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#pubblicata_nel_periodo> <http://modSem/miriam/ontologies/2020/mangaWorld#tempo_doubt> ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#scritta_da> <http://modSem/miriam/ontologies/2020/mangaWorld#YoshikiTonogai> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#serializzato_su> <http://modSem/miriam/ontologies/2020/mangaWorld#Monthly_Shōnen_Gangan> ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_volumi> 4 ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#stato_in_patria> "Completato"^^xsd:string ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Doubt"@it ;
@@ -971,13 +971,16 @@ It should be used when you want to talk about time as an object having some char
                                                                                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#Judge4> ,
                                                                                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#Judge5> ,
                                                                                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#Judge6> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#pubblicata_nel_periodo> <http://modSem/miriam/ontologies/2020/mangaWorld#tempo_judge> ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#scritta_da> <http://modSem/miriam/ontologies/2020/mangaWorld#YoshikiTonogai> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#serializzato_su> <http://modSem/miriam/ontologies/2020/mangaWorld#Monthly_Shōnen_Gangan> ;
                                                         <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge1> ,
                                                                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Judge2> ,
                                                                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Judge3> ,
                                                                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Judge4> ,
                                                                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Judge5> ,
                                                                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Judge6> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_volumi> 6 ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#stato_in_patria> "Completato"^^xsd:string ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Judge"@it ;
                                                         rdfs:comment "Manga intitolato \"Judge\""@it ,
@@ -1066,6 +1069,16 @@ It should be used when you want to talk about time as an object having some char
                                                                            "Shonen manga magazine named Manga Blade"@en ;
                                                               rdfs:label "Manga Blade"@en ,
                                                                          "Manga Blade"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#Monthly_Shōnen_Gangan
+<http://modSem/miriam/ontologies/2020/mangaWorld#Monthly_Shōnen_Gangan> rdf:type owl:NamedIndividual ,
+                                                                                 <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_magazine> ;
+                                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#magazine_ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#shonen> ;
+                                                                        rdfs:comment "Rivista di manga shonen chiamata Manga Blade"@it ,
+                                                                                     "Shonen manga magazine named Manga Blade"@en ;
+                                                                        rdfs:label "Monthly Shōnen Gangan"@en ,
+                                                                                   "Monthly Shōnen Gangan"@it .
 
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#Nagabe
@@ -1223,16 +1236,6 @@ It should be used when you want to talk about time as an object having some char
                                                                              "Platonic love"@en .
 
 
-###  http://modSem/miriam/ontologies/2020/mangaWorld#categoria_doubt
-<http://modSem/miriam/ontologies/2020/mangaWorld#categoria_doubt> rdf:type owl:NamedIndividual ,
-                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ,
-                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Shonen> ;
-                                                                  rdfs:comment "Categoria del manga 'Doubt'"@it ,
-                                                                               "Category of the manga called 'Doubt'"@en ;
-                                                                  rdfs:label "Categoria di Doubt"@it ,
-                                                                             "Doubt's category"@en .
-
-
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#categoria_girl_from
 <http://modSem/miriam/ontologies/2020/mangaWorld#categoria_girl_from> rdf:type owl:NamedIndividual ,
                                                                                <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ;
@@ -1277,6 +1280,19 @@ It should be used when you want to talk about time as an object having some char
                                                                     "Shonen"@it .
 
 
+###  http://modSem/miriam/ontologies/2020/mangaWorld#tempo_doubt
+<http://modSem/miriam/ontologies/2020/mangaWorld#tempo_doubt> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> ;
+                                                              <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate> 2007 ,
+                                                                                                                                              2009 ;
+                                                              <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalEndDate> 2009 ;
+                                                              <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate> 2007 ;
+                                                              rdfs:comment "Periodo in cui è stato pubblicato il manga \"Doubt\""@it ,
+                                                                           "When \"Doubt\" was published"@en ;
+                                                              rdfs:label "Publication time of Doubt"@en ,
+                                                                         "Tempo di pubblicazione di Doubt"@it .
+
+
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#tempo_girl_from
 <http://modSem/miriam/ontologies/2020/mangaWorld#tempo_girl_from> rdf:type owl:NamedIndividual ,
                                                                            <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> ;
@@ -1286,6 +1302,19 @@ It should be used when you want to talk about time as an object having some char
                                                                                "When \"The Girl From the Other Side\" was published"@en ;
                                                                   rdfs:label "Publication time of The girl from the other side"@en ,
                                                                              "Tempo di pubblicazione di Girl From The Other Side"@it .
+
+
+###  http://modSem/miriam/ontologies/2020/mangaWorld#tempo_judge
+<http://modSem/miriam/ontologies/2020/mangaWorld#tempo_judge> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> ;
+                                                              <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate> 2010 ,
+                                                                                                                                              2012 ;
+                                                              <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalEndDate> 2012 ;
+                                                              <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate> 2010 ;
+                                                              rdfs:comment "Periodo in cui è stato pubblicato il manga \"Judge\""@it ,
+                                                                           "When \"Judge\" was published"@en ;
+                                                              rdfs:label "Publication time of Judge"@en ,
+                                                                         "Tempo di pubblicazione di Judge"@it .
 
 
 #################################################################

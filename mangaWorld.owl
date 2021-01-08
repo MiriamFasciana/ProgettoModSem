@@ -326,6 +326,9 @@
         <NamedIndividual IRI="#Manga_blade"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Monthly_Shōnen_Gangan"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Nagabe"/>
     </Declaration>
     <Declaration>
@@ -353,9 +356,6 @@
         <NamedIndividual IRI="#amore_platonico"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#categoria_doubt"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#categoria_girl_from"/>
     </Declaration>
     <Declaration>
@@ -368,7 +368,13 @@
         <NamedIndividual IRI="#shonen"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#tempo_doubt"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#tempo_girl_from"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tempo_judge"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -767,10 +773,6 @@
         <NamedIndividual IRI="#amore_platonico"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Shonen"/>
-        <NamedIndividual IRI="#categoria_doubt"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Categoria"/>
         <NamedIndividual IRI="#categoria_girl_from"/>
     </ClassAssertion>
@@ -818,6 +820,7 @@
     </DifferentIndividuals>
     <DifferentIndividuals>
         <NamedIndividual IRI="#Manga_blade"/>
+        <NamedIndividual IRI="#Monthly_Shōnen_Gangan"/>
         <NamedIndividual IRI="#Opera"/>
     </DifferentIndividuals>
     <DifferentIndividuals>
@@ -825,9 +828,13 @@
         <NamedIndividual IRI="#YoshikiTonogai"/>
     </DifferentIndividuals>
     <DifferentIndividuals>
-        <NamedIndividual IRI="#categoria_doubt"/>
         <NamedIndividual IRI="#categoria_girl_from"/>
         <NamedIndividual IRI="#categoria_wizdoms"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#tempo_doubt"/>
+        <NamedIndividual IRI="#tempo_girl_from"/>
+        <NamedIndividual IRI="#tempo_judge"/>
     </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#is_part_of_tankobon"/>
@@ -875,14 +882,19 @@
         <NamedIndividual IRI="#YoshikiTonogai"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#ha_categoria"/>
+        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
         <NamedIndividual IRI="#Doubt"/>
-        <NamedIndividual IRI="#categoria_doubt"/>
+        <NamedIndividual IRI="#tempo_doubt"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#scritta_da"/>
         <NamedIndividual IRI="#Doubt"/>
         <NamedIndividual IRI="#YoshikiTonogai"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serializzato_su"/>
+        <NamedIndividual IRI="#Doubt"/>
+        <NamedIndividual IRI="#Monthly_Shōnen_Gangan"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#disegnata_da"/>
@@ -913,6 +925,16 @@
         <ObjectProperty IRI="#serializzato_su"/>
         <NamedIndividual IRI="#Girl_from_the_other_side"/>
         <NamedIndividual IRI="#Manga_blade"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+        <NamedIndividual IRI="#Judge"/>
+        <NamedIndividual IRI="#tempo_judge"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serializzato_su"/>
+        <NamedIndividual IRI="#Judge"/>
+        <NamedIndividual IRI="#Monthly_Shōnen_Gangan"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#is_part_of_manga"/>
@@ -947,6 +969,11 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#magazine_ha_categoria"/>
         <NamedIndividual IRI="#Manga_blade"/>
+        <NamedIndividual IRI="#shonen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#magazine_ha_categoria"/>
+        <NamedIndividual IRI="#Monthly_Shōnen_Gangan"/>
         <NamedIndividual IRI="#shonen"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -1140,6 +1167,11 @@
         <Literal xml:lang="ja">Totsukuni no Shōjo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#numero_di_volumi"/>
+        <NamedIndividual IRI="#Judge"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#stato_in_patria"/>
         <NamedIndividual IRI="#Judge"/>
         <Literal>Completato</Literal>
@@ -1235,9 +1267,29 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalEndDate"/>
+        <NamedIndividual IRI="#tempo_doubt"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2009</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate"/>
+        <NamedIndividual IRI="#tempo_doubt"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2007</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate"/>
         <NamedIndividual IRI="#tempo_girl_from"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalEndDate"/>
+        <NamedIndividual IRI="#tempo_judge"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2012</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate"/>
+        <NamedIndividual IRI="#tempo_judge"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2010</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#has_chapter"/>
@@ -2438,6 +2490,26 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Monthly_Shōnen_Gangan</IRI>
+        <Literal xml:lang="it">Rivista di manga shonen chiamata Manga Blade</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Monthly_Shōnen_Gangan</IRI>
+        <Literal xml:lang="en">Shonen manga magazine named Manga Blade</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Monthly_Shōnen_Gangan</IRI>
+        <Literal xml:lang="en">Monthly Shōnen Gangan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Monthly_Shōnen_Gangan</IRI>
+        <Literal xml:lang="it">Monthly Shōnen Gangan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Nagabe</IRI>
         <Literal xml:lang="it">Mangaka di nome Nagabe</Literal>
     </AnnotationAssertion>
@@ -2943,26 +3015,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#categoria_doubt</IRI>
-        <Literal xml:lang="it">Categoria del manga &apos;Doubt&apos;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#categoria_doubt</IRI>
-        <Literal xml:lang="en">Category of the manga called &apos;Doubt&apos;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#categoria_doubt</IRI>
-        <Literal xml:lang="it">Categoria di Doubt</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#categoria_doubt</IRI>
-        <Literal xml:lang="en">Doubt&apos;s category</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#categoria_girl_from</IRI>
         <Literal xml:lang="it">Categoria del manga &apos;Girl from the other side&apos;</Literal>
     </AnnotationAssertion>
@@ -3463,6 +3515,26 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tempo_doubt</IRI>
+        <Literal xml:lang="it">Periodo in cui è stato pubblicato il manga &quot;Doubt&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tempo_doubt</IRI>
+        <Literal xml:lang="en">When &quot;Doubt&quot; was published</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tempo_doubt</IRI>
+        <Literal xml:lang="en">Publication time of Doubt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tempo_doubt</IRI>
+        <Literal xml:lang="it">Tempo di pubblicazione di Doubt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#tempo_girl_from</IRI>
         <Literal xml:lang="it">Periodo in cui è stato pubblicato il manga &quot;Girl From The Other Side&quot;</Literal>
     </AnnotationAssertion>
@@ -3480,6 +3552,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#tempo_girl_from</IRI>
         <Literal xml:lang="it">Tempo di pubblicazione di Girl From The Other Side</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tempo_judge</IRI>
+        <Literal xml:lang="it">Periodo in cui è stato pubblicato il manga &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tempo_judge</IRI>
+        <Literal xml:lang="en">When &quot;Judge&quot; was published</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tempo_judge</IRI>
+        <Literal xml:lang="en">Publication time of Judge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tempo_judge</IRI>
+        <Literal xml:lang="it">Tempo di pubblicazione di Judge</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
