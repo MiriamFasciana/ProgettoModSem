@@ -1,0 +1,3531 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://modSem/miriam/ontologies/2020/mangaWorld"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://modSem/miriam/ontologies/2020/mangaWorld">
+    <Prefix name="" IRI="http://modSem/miriam/ontologies/2020/mangaWorld"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.ontologydesignpatterns.org/cp/owl/partof.owl</Import>
+    <Import>http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="it">Miriam Fasciana</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <Literal xml:lang="en">2020-01-07</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <Literal xml:lang="it">Ontologia sul dominio dei manga focalizzata sulle categorie</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="en">Manga ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal>manga</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <Literal>http://modSem/miriam/ontologies/2020/mangaWorld</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">MangaWorld</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="it">MondoManga</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://dbpedia.org/ontology/Manga"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://https://www.wikidata.org/wiki/Q191633"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Adolescente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Adolescente_femminile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Adolescente_maschile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Adulto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Amore_fisico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Amore_omosessuale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Amore_omosessuale_femminile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Amore_omosessuale_maschile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Amore_platonico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Azione"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoysLove"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capitolo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Categoria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contesto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fantastico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Genere"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Global_manga"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Infantile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kodomo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Magico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Manga"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Manga_boysLove"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Manga_con_volume_unico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Manga_magazine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Manga_seinen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Manga_shojo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Manga_shonen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mangaka"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mini_serie"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nazione"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nazione_giapponese"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nazione_non_giapponese"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Persona"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pubblico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scolastico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Seinen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sentimentale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Serie_lunga"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shojo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shojo-ai"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shonen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shonen-ai"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sportivo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tankobon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Yaoi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Yuri"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ambientata_in_contesto"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#disegna"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#disegnata_da"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ha_categoria"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ha_genere"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_chapter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_tankobon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_part_of_manga"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_part_of_tankobon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#magazine_ha_categoria"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#manga_ha_contesto"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#nazione_di_origine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#orientata_a_pubblico"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#scritta_da"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#scrive"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#serializzato_su"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numero_del_tankobon"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numero_di_capitolo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numero_di_volumi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sottotitolo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#stato_in_patria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#titolo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#titolo_originale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BoysLove"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Capitolo1Wizdoms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Capitolo2Wizdoms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Capitolo3Wizdoms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Capitolo4Wizdoms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Capitolo5Wizdoms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Capitolo6Wizdoms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Capitolo7Wizdoms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Capitolo8Wizdoms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Doubt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Giappone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Girl_from_the_other_side"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Judge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Judge1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Judge2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Judge3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Judge4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Judge5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Judge6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Manga_blade"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nagabe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Opera"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PenguinRumble"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Svezia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wizdoms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wizdoms1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#YoshikiTonogai"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#amore_omo_maschile"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#amore_platonico"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#categoria_doubt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#categoria_girl_from"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#categoria_wizdoms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#contesto_fantastico"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#shonen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tempo_girl_from"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://dbpedia.org/ontology/Manga"/>
+        <Class IRI="#Manga"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://https://www.wikidata.org/wiki/Q191633"/>
+        <Class IRI="#Mangaka"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Global_manga"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#nazione_di_origine"/>
+            <Class IRI="#Nazione_non_giapponese"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Kodomo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#orientata_a_pubblico"/>
+            <Class IRI="#Infantile"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Manga_boysLove"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ha_categoria"/>
+            <Class IRI="#BoysLove"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Manga_con_volume_unico"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#numero_di_volumi"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Manga_seinen"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ha_categoria"/>
+            <Class IRI="#Seinen"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Manga_shojo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ha_categoria"/>
+            <Class IRI="#Shojo"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Manga_shonen"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ha_categoria"/>
+            <Class IRI="#Shonen"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Mini_serie"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#numero_di_volumi"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Nazione_giapponese"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Giappone"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Nazione_non_giapponese"/>
+        <ObjectComplementOf>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#Giappone"/>
+            </ObjectOneOf>
+        </ObjectComplementOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Persona"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Seinen"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#orientata_a_pubblico"/>
+            <Class IRI="#Adulto"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Serie_lunga"/>
+        <ObjectMinCardinality cardinality="6">
+            <ObjectProperty IRI="#has_tankobon"/>
+            <Class IRI="#Tankobon"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Shojo"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ambientata_in_contesto"/>
+                <ObjectUnionOf>
+                    <Class IRI="#Fantastico"/>
+                    <Class IRI="#Scolastico"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ha_genere"/>
+                <Class IRI="#Sentimentale"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#orientata_a_pubblico"/>
+                <Class IRI="#Adolescente_femminile"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Shojo-ai"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ha_genere"/>
+                <Class IRI="#Amore_omosessuale_femminile"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ha_genere"/>
+                <Class IRI="#Amore_platonico"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Shonen"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ambientata_in_contesto"/>
+                <ObjectUnionOf>
+                    <Class IRI="#Fantastico"/>
+                    <Class IRI="#Sportivo"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ha_genere"/>
+                <Class IRI="#Azione"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#orientata_a_pubblico"/>
+                <Class IRI="#Adolescente_maschile"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Shonen-ai"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ha_genere"/>
+                <Class IRI="#Amore_omosessuale_maschile"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ha_genere"/>
+                <Class IRI="#Amore_platonico"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Yaoi"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ha_genere"/>
+                <Class IRI="#Amore_fisico"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ha_genere"/>
+                <Class IRI="#Amore_omosessuale_maschile"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Yuri"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ha_genere"/>
+                <Class IRI="#Amore_fisico"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ha_genere"/>
+                <Class IRI="#Amore_omosessuale_femminile"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Adolescente"/>
+        <Class IRI="#Pubblico"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Adolescente_femminile"/>
+        <Class IRI="#Adolescente"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Adolescente_maschile"/>
+        <Class IRI="#Adolescente"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Adulto"/>
+        <Class IRI="#Pubblico"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Amore_fisico"/>
+        <Class IRI="#Sentimentale"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Amore_omosessuale"/>
+        <Class IRI="#Sentimentale"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Amore_omosessuale_femminile"/>
+        <Class IRI="#Amore_omosessuale"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Amore_omosessuale_maschile"/>
+        <Class IRI="#Amore_omosessuale"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Amore_platonico"/>
+        <Class IRI="#Sentimentale"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Azione"/>
+        <Class IRI="#Genere"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoysLove"/>
+        <Class IRI="#Categoria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fantastico"/>
+        <Class IRI="#Contesto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Global_manga"/>
+        <Class IRI="#Manga"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Infantile"/>
+        <Class IRI="#Pubblico"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kodomo"/>
+        <Class IRI="#Categoria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Magico"/>
+        <Class IRI="#Genere"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manga_boysLove"/>
+        <Class IRI="#Manga"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manga_con_volume_unico"/>
+        <Class IRI="#Mini_serie"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manga_seinen"/>
+        <Class IRI="#Manga"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manga_shojo"/>
+        <Class IRI="#Manga"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manga_shonen"/>
+        <Class IRI="#Manga"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mangaka"/>
+        <Class IRI="#Persona"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mini_serie"/>
+        <Class IRI="#Manga"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nazione_giapponese"/>
+        <Class IRI="#Nazione"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nazione_non_giapponese"/>
+        <Class IRI="#Nazione"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scolastico"/>
+        <Class IRI="#Contesto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Seinen"/>
+        <Class IRI="#Categoria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sentimentale"/>
+        <Class IRI="#Genere"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Serie_lunga"/>
+        <Class IRI="#Manga"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shojo"/>
+        <Class IRI="#Categoria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shojo-ai"/>
+        <Class IRI="#Categoria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shonen"/>
+        <Class IRI="#Categoria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shonen-ai"/>
+        <Class IRI="#BoysLove"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sportivo"/>
+        <Class IRI="#Contesto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Yaoi"/>
+        <Class IRI="#BoysLove"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Yuri"/>
+        <Class IRI="#Categoria"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Adolescente"/>
+        <Class IRI="#Adulto"/>
+        <Class IRI="#Infantile"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Adolescente_femminile"/>
+        <Class IRI="#Adolescente_maschile"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Amore_fisico"/>
+        <Class IRI="#Amore_platonico"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Amore_omosessuale_femminile"/>
+        <Class IRI="#Amore_omosessuale_maschile"/>
+    </DisjointClasses>
+    <DisjointUnion>
+        <Class IRI="#Nazione"/>
+        <Class IRI="#Nazione_giapponese"/>
+        <Class IRI="#Nazione_non_giapponese"/>
+    </DisjointUnion>
+    <ClassAssertion>
+        <Class IRI="#BoysLove"/>
+        <NamedIndividual IRI="#BoysLove"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Manga_magazine"/>
+        <NamedIndividual IRI="#Opera"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Amore_omosessuale_maschile"/>
+        <NamedIndividual IRI="#amore_omo_maschile"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Amore_platonico"/>
+        <NamedIndividual IRI="#amore_platonico"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shonen"/>
+        <NamedIndividual IRI="#categoria_doubt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Categoria"/>
+        <NamedIndividual IRI="#categoria_girl_from"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fantastico"/>
+        <NamedIndividual IRI="#contesto_fantastico"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shonen"/>
+        <NamedIndividual IRI="#shonen"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#BoysLove"/>
+        <NamedIndividual IRI="#shonen"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Capitolo1Wizdoms"/>
+        <NamedIndividual IRI="#Capitolo2Wizdoms"/>
+        <NamedIndividual IRI="#Capitolo3Wizdoms"/>
+        <NamedIndividual IRI="#Capitolo4Wizdoms"/>
+        <NamedIndividual IRI="#Capitolo5Wizdoms"/>
+        <NamedIndividual IRI="#Capitolo6Wizdoms"/>
+        <NamedIndividual IRI="#Capitolo7Wizdoms"/>
+        <NamedIndividual IRI="#Capitolo8Wizdoms"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Doubt"/>
+        <NamedIndividual IRI="#Girl_from_the_other_side"/>
+        <NamedIndividual IRI="#Judge"/>
+        <NamedIndividual IRI="#PenguinRumble"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Giappone"/>
+        <NamedIndividual IRI="#Svezia"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Judge1"/>
+        <NamedIndividual IRI="#Judge2"/>
+        <NamedIndividual IRI="#Judge3"/>
+        <NamedIndividual IRI="#Judge4"/>
+        <NamedIndividual IRI="#Judge5"/>
+        <NamedIndividual IRI="#Judge6"/>
+        <NamedIndividual IRI="#Wizdoms1"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Manga_blade"/>
+        <NamedIndividual IRI="#Opera"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Nagabe"/>
+        <NamedIndividual IRI="#YoshikiTonogai"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#categoria_doubt"/>
+        <NamedIndividual IRI="#categoria_girl_from"/>
+        <NamedIndividual IRI="#categoria_wizdoms"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_tankobon"/>
+        <NamedIndividual IRI="#Capitolo1Wizdoms"/>
+        <NamedIndividual IRI="#Wizdoms1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_tankobon"/>
+        <NamedIndividual IRI="#Capitolo2Wizdoms"/>
+        <NamedIndividual IRI="#Wizdoms1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_tankobon"/>
+        <NamedIndividual IRI="#Capitolo3Wizdoms"/>
+        <NamedIndividual IRI="#Wizdoms1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_tankobon"/>
+        <NamedIndividual IRI="#Capitolo4Wizdoms"/>
+        <NamedIndividual IRI="#Wizdoms1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_tankobon"/>
+        <NamedIndividual IRI="#Capitolo5Wizdoms"/>
+        <NamedIndividual IRI="#Wizdoms1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_tankobon"/>
+        <NamedIndividual IRI="#Capitolo6Wizdoms"/>
+        <NamedIndividual IRI="#Wizdoms1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_tankobon"/>
+        <NamedIndividual IRI="#Capitolo7Wizdoms"/>
+        <NamedIndividual IRI="#Wizdoms1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_tankobon"/>
+        <NamedIndividual IRI="#Capitolo8Wizdoms"/>
+        <NamedIndividual IRI="#Wizdoms1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disegnata_da"/>
+        <NamedIndividual IRI="#Doubt"/>
+        <NamedIndividual IRI="#YoshikiTonogai"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ha_categoria"/>
+        <NamedIndividual IRI="#Doubt"/>
+        <NamedIndividual IRI="#categoria_doubt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scritta_da"/>
+        <NamedIndividual IRI="#Doubt"/>
+        <NamedIndividual IRI="#YoshikiTonogai"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disegnata_da"/>
+        <NamedIndividual IRI="#Girl_from_the_other_side"/>
+        <NamedIndividual IRI="#Nagabe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ha_categoria"/>
+        <NamedIndividual IRI="#Girl_from_the_other_side"/>
+        <NamedIndividual IRI="#categoria_girl_from"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nazione_di_origine"/>
+        <NamedIndividual IRI="#Girl_from_the_other_side"/>
+        <NamedIndividual IRI="#Giappone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+        <NamedIndividual IRI="#Girl_from_the_other_side"/>
+        <NamedIndividual IRI="#tempo_girl_from"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scritta_da"/>
+        <NamedIndividual IRI="#Girl_from_the_other_side"/>
+        <NamedIndividual IRI="#Nagabe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serializzato_su"/>
+        <NamedIndividual IRI="#Girl_from_the_other_side"/>
+        <NamedIndividual IRI="#Manga_blade"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_manga"/>
+        <NamedIndividual IRI="#Judge1"/>
+        <NamedIndividual IRI="#Judge"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_manga"/>
+        <NamedIndividual IRI="#Judge2"/>
+        <NamedIndividual IRI="#Judge"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_manga"/>
+        <NamedIndividual IRI="#Judge3"/>
+        <NamedIndividual IRI="#Judge"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_manga"/>
+        <NamedIndividual IRI="#Judge4"/>
+        <NamedIndividual IRI="#Judge"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_manga"/>
+        <NamedIndividual IRI="#Judge5"/>
+        <NamedIndividual IRI="#Judge"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_manga"/>
+        <NamedIndividual IRI="#Judge6"/>
+        <NamedIndividual IRI="#Judge"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#magazine_ha_categoria"/>
+        <NamedIndividual IRI="#Manga_blade"/>
+        <NamedIndividual IRI="#shonen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disegna"/>
+        <NamedIndividual IRI="#Nagabe"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scrive"/>
+        <NamedIndividual IRI="#Nagabe"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#magazine_ha_categoria"/>
+        <NamedIndividual IRI="#Opera"/>
+        <NamedIndividual IRI="#BoysLove"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nazione_di_origine"/>
+        <NamedIndividual IRI="#PenguinRumble"/>
+        <NamedIndividual IRI="#Svezia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ha_categoria"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+        <NamedIndividual IRI="#categoria_wizdoms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nazione_di_origine"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+        <NamedIndividual IRI="#Giappone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serializzato_su"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+        <NamedIndividual IRI="#Opera"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of_manga"/>
+        <NamedIndividual IRI="#Wizdoms1"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disegna"/>
+        <NamedIndividual IRI="#YoshikiTonogai"/>
+        <NamedIndividual IRI="#Judge"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scrive"/>
+        <NamedIndividual IRI="#YoshikiTonogai"/>
+        <NamedIndividual IRI="#Judge"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ambientata_in_contesto"/>
+        <NamedIndividual IRI="#categoria_girl_from"/>
+        <NamedIndividual IRI="#contesto_fantastico"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ambientata_in_contesto"/>
+        <NamedIndividual IRI="#categoria_wizdoms"/>
+        <NamedIndividual IRI="#contesto_fantastico"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ha_genere"/>
+        <NamedIndividual IRI="#categoria_wizdoms"/>
+        <NamedIndividual IRI="#amore_omo_maschile"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ha_genere"/>
+        <NamedIndividual IRI="#categoria_wizdoms"/>
+        <NamedIndividual IRI="#amore_platonico"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_di_capitolo"/>
+        <NamedIndividual IRI="#Capitolo1Wizdoms"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#Capitolo1Wizdoms"/>
+        <Literal xml:lang="it">Alan &amp; Eddington - Il genio e il signor nessuno</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_di_capitolo"/>
+        <NamedIndividual IRI="#Capitolo2Wizdoms"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#Capitolo2Wizdoms"/>
+        <Literal xml:lang="it">Florio &amp; Nicol - Preda e predatore</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_di_capitolo"/>
+        <NamedIndividual IRI="#Capitolo3Wizdoms"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#Capitolo3Wizdoms"/>
+        <Literal xml:lang="it">Fermat &amp; Emil - Maestro e allievo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_di_capitolo"/>
+        <NamedIndividual IRI="#Capitolo4Wizdoms"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#Capitolo4Wizdoms"/>
+        <Literal xml:lang="it">Marley &amp; Collette - Sangue caldo e sangue freddo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_di_capitolo"/>
+        <NamedIndividual IRI="#Capitolo5Wizdoms"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#Capitolo5Wizdoms"/>
+        <Literal xml:lang="it">Doug &amp; Huei - Corteggiamento e amicizia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_di_capitolo"/>
+        <NamedIndividual IRI="#Capitolo6Wizdoms"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#Capitolo6Wizdoms"/>
+        <Literal xml:lang="it">Allhoff &amp; Carreras - Esca e gioco</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_di_capitolo"/>
+        <NamedIndividual IRI="#Capitolo7Wizdoms"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#Capitolo7Wizdoms"/>
+        <Literal xml:lang="it">Cromwell &amp; Benjamin - Oratore e ascoltatore</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_di_capitolo"/>
+        <NamedIndividual IRI="#Capitolo8Wizdoms"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#Capitolo8Wizdoms"/>
+        <Literal xml:lang="it">Mauchly &amp; Charles - La bestia e l&apos;uomo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_di_volumi"/>
+        <NamedIndividual IRI="#Doubt"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#stato_in_patria"/>
+        <NamedIndividual IRI="#Doubt"/>
+        <Literal>Completato</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#Doubt"/>
+        <Literal xml:lang="it">Doubt</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#sottotitolo"/>
+        <NamedIndividual IRI="#Girl_from_the_other_side"/>
+        <Literal xml:lang="en">Siúil, a Rún</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#sottotitolo"/>
+        <NamedIndividual IRI="#Girl_from_the_other_side"/>
+        <Literal xml:lang="it">Siúil, a Rún</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#stato_in_patria"/>
+        <NamedIndividual IRI="#Girl_from_the_other_side"/>
+        <Literal>In corso</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#Girl_from_the_other_side"/>
+        <Literal xml:lang="it">Girl from the other side</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo_originale"/>
+        <NamedIndividual IRI="#Girl_from_the_other_side"/>
+        <Literal xml:lang="ja">Totsukuni no Shōjo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#stato_in_patria"/>
+        <NamedIndividual IRI="#Judge"/>
+        <Literal>Completato</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#Judge"/>
+        <Literal xml:lang="it">Judge</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_del_tankobon"/>
+        <NamedIndividual IRI="#Judge1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_del_tankobon"/>
+        <NamedIndividual IRI="#Judge2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_del_tankobon"/>
+        <NamedIndividual IRI="#Judge3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_del_tankobon"/>
+        <NamedIndividual IRI="#Judge4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_del_tankobon"/>
+        <NamedIndividual IRI="#Judge5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_del_tankobon"/>
+        <NamedIndividual IRI="#Judge6"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_di_volumi"/>
+        <NamedIndividual IRI="#PenguinRumble"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#stato_in_patria"/>
+        <NamedIndividual IRI="#PenguinRumble"/>
+        <Literal>Completato</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#PenguinRumble"/>
+        <Literal xml:lang="it">Penguin Rumble</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo_originale"/>
+        <NamedIndividual IRI="#PenguinRumble"/>
+        <Literal xml:lang="sw">Penguin Rumble</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_di_volumi"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#sottotitolo"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+        <Literal xml:lang="it">The Wize Wize Beasts of the Wizarding Wizdoms</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#stato_in_patria"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+        <Literal>Completato</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+        <Literal xml:lang="en">The Wize Wize Beasts of the Wizarding Wizdoms</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+        <Literal xml:lang="it">Wizdoms</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titolo_originale"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+        <Literal xml:lang="ja">Wizdoms no Kemonotachi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numero_del_tankobon"/>
+        <NamedIndividual IRI="#Wizdoms1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate"/>
+        <NamedIndividual IRI="#tempo_girl_from"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2015</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_chapter"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_tankobon"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#is_part_of_manga"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#is_part_of_tankobon"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#disegna"/>
+        <ObjectProperty IRI="#disegnata_da"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_chapter"/>
+        <ObjectProperty IRI="#is_part_of_tankobon"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_tankobon"/>
+        <ObjectProperty IRI="#is_part_of_manga"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#scritta_da"/>
+        <ObjectProperty IRI="#scrive"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#magazine_ha_categoria"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#nazione_di_origine"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#orientata_a_pubblico"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#serializzato_su"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ambientata_in_contesto"/>
+        <Class IRI="#Categoria"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#disegna"/>
+        <Class IRI="#Mangaka"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#disegnata_da"/>
+        <Class IRI="#Manga"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ha_categoria"/>
+        <Class IRI="#Manga"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ha_genere"/>
+        <Class IRI="#Categoria"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_part_of_manga"/>
+        <Class IRI="#Tankobon"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_part_of_tankobon"/>
+        <Class IRI="#Capitolo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#magazine_ha_categoria"/>
+        <Class IRI="#Manga_magazine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#manga_ha_contesto"/>
+        <Class IRI="#Manga"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#nazione_di_origine"/>
+        <Class IRI="#Manga"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#orientata_a_pubblico"/>
+        <Class IRI="#Categoria"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+        <Class IRI="#Manga"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#scritta_da"/>
+        <Class IRI="#Manga"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#scrive"/>
+        <Class IRI="#Mangaka"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#serializzato_su"/>
+        <Class IRI="#Manga"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ambientata_in_contesto"/>
+        <Class IRI="#Contesto"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#disegna"/>
+        <Class IRI="#Manga"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#disegnata_da"/>
+        <Class IRI="#Mangaka"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ha_categoria"/>
+        <Class IRI="#Categoria"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ha_genere"/>
+        <Class IRI="#Genere"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_part_of_manga"/>
+        <Class IRI="#Manga"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_part_of_tankobon"/>
+        <Class IRI="#Tankobon"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#magazine_ha_categoria"/>
+        <Class IRI="#Categoria"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#manga_ha_contesto"/>
+        <Class IRI="#Contesto"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#nazione_di_origine"/>
+        <Class IRI="#Nazione"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#orientata_a_pubblico"/>
+        <Class IRI="#Pubblico"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#scritta_da"/>
+        <Class IRI="#Mangaka"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#scrive"/>
+        <Class IRI="#Manga"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#serializzato_su"/>
+        <Class IRI="#Manga_magazine"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#ha_categoria"/>
+            <ObjectProperty IRI="#ambientata_in_contesto"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#manga_ha_contesto"/>
+    </SubObjectPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#numero_del_tankobon"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#titolo_originale"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numero_del_tankobon"/>
+        <Class IRI="#Tankobon"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numero_di_capitolo"/>
+        <Class IRI="#Capitolo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numero_di_volumi"/>
+        <Class IRI="#Manga"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sottotitolo"/>
+        <Class IRI="#Manga"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#stato_in_patria"/>
+        <Class IRI="#Manga"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#titolo"/>
+        <ObjectUnionOf>
+            <Class IRI="#Capitolo"/>
+            <Class IRI="#Manga"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#titolo_originale"/>
+        <ObjectUnionOf>
+            <Class IRI="#Capitolo"/>
+            <Class IRI="#Manga"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#numero_del_tankobon"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numero_di_capitolo"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numero_di_volumi"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sottotitolo"/>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#stato_in_patria"/>
+        <DataOneOf>
+            <Literal>Completato</Literal>
+            <Literal>In corso</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#titolo"/>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#titolo_originale"/>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://https://www.wikidata.org/wiki/Q191633</IRI>
+        <Literal xml:lang="en">mangaka</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Adolescente</IRI>
+        <Literal xml:lang="it">Il manga è rivolto agli adolescenti</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Adolescente</IRI>
+        <Literal xml:lang="en">The manga is aimed at the teenagers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Adolescente</IRI>
+        <Literal xml:lang="it">Adolescente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Adolescente</IRI>
+        <Literal xml:lang="en">Teenager</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Adolescente_femminile</IRI>
+        <Literal xml:lang="it">Il manga è rivolto alle ragazze adolescenti</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Adolescente_femminile</IRI>
+        <Literal xml:lang="en">The manga is aimed at the teenager girls</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Adolescente_femminile</IRI>
+        <Literal xml:lang="it">Ragazze adolescenti</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Adolescente_femminile</IRI>
+        <Literal xml:lang="en">Teenager girls</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Adolescente_maschile</IRI>
+        <Literal xml:lang="it">Il manga è rivolto ai ragazzi adolescenti</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Adolescente_maschile</IRI>
+        <Literal xml:lang="en">The manga is aimed at the teenager boys</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Adolescente_maschile</IRI>
+        <Literal xml:lang="it">Ragazzi adolescenti</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Adolescente_maschile</IRI>
+        <Literal xml:lang="en">Teenager boys</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Adulto</IRI>
+        <Literal xml:lang="it">Il manga è rivolto agli adulti</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Adulto</IRI>
+        <Literal xml:lang="en">The manga is aimed at the adults</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Adulto</IRI>
+        <Literal xml:lang="en">Adult</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Adulto</IRI>
+        <Literal xml:lang="it">Adulto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Amore_fisico</IRI>
+        <Literal xml:lang="en">Plot about love in a physical way</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Amore_fisico</IRI>
+        <Literal xml:lang="it">Trama riguardante un amore sviluppato sul piano fisico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Amore_fisico</IRI>
+        <Literal xml:lang="it">Amore fisico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Amore_fisico</IRI>
+        <Literal xml:lang="en">Physical love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Amore_omosessuale</IRI>
+        <Literal xml:lang="en">Plot about omosexual love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Amore_omosessuale</IRI>
+        <Literal xml:lang="it">Trama riguardante l&apos;amore omosessuale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Amore_omosessuale</IRI>
+        <Literal xml:lang="it">Amore omosessuale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Amore_omosessuale</IRI>
+        <Literal xml:lang="en">Omosexual love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Amore_omosessuale_femminile</IRI>
+        <Literal xml:lang="en">Plot about omosexual love between girls</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Amore_omosessuale_femminile</IRI>
+        <Literal xml:lang="it">Trama riguardante l&apos;amore omosessuale tra donne</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Amore_omosessuale_femminile</IRI>
+        <Literal xml:lang="it">Amore omosessuale femminile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Amore_omosessuale_femminile</IRI>
+        <Literal xml:lang="en">Girls omosexual love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Amore_omosessuale_maschile</IRI>
+        <Literal xml:lang="en">Plot about omosexual love between boys</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Amore_omosessuale_maschile</IRI>
+        <Literal xml:lang="it">Trama riguardante l&apos;amore omosessuale tra uomini</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Amore_omosessuale_maschile</IRI>
+        <Literal xml:lang="it">Amore omosessuale maschile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Amore_omosessuale_maschile</IRI>
+        <Literal xml:lang="it">Boys omosexual love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Amore_platonico</IRI>
+        <Literal xml:lang="en">Plot about platonic love, without sexual references</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Amore_platonico</IRI>
+        <Literal xml:lang="it">Trama riguardante l&apos;amore sviluppato in modo platonico, senza riferimenti sessuali</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Amore_platonico</IRI>
+        <Literal xml:lang="it">Amore platonico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Amore_platonico</IRI>
+        <Literal xml:lang="en">Platonic love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Azione</IRI>
+        <Literal xml:lang="it">Genere di trama in cui i protagonisti devono affrontare una serie di sfide che richiedono coraggio e prodezza fisica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Azione</IRI>
+        <Literal xml:lang="en">Plot&apos;s genre in which the main characters have to face challanges that requires bravery and physical prowess</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Azione</IRI>
+        <Literal xml:lang="en">Action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Azione</IRI>
+        <Literal xml:lang="it">Azione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BoysLove</IRI>
+        <Literal xml:lang="it">Categoria di manga in cui la storia riguarda l&apos;amore tra maschi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BoysLove</IRI>
+        <Literal xml:lang="en">Manga&apos;s category in which the story is about male gay love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BoysLove</IRI>
+        <Literal xml:lang="en">Boys love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo</IRI>
+        <Literal xml:lang="en">A manga&apos;s chapter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo</IRI>
+        <Literal xml:lang="it">Capitolo di un manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo</IRI>
+        <Literal xml:lang="it">Capitolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo</IRI>
+        <Literal xml:lang="en">Chapter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo1Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 1 di Wizdoms riguardante Alan e Eddington</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo1Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 1 about Alan and Eddington</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo1Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 1 di Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo1Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo2Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 2 di Wizdoms riguardante Florio e Nicol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo2Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 2 about Florio and Nicol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo2Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 2 di Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo2Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo3Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 3 di Wizoms riguardante Fermat ed Emil</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo3Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 3 about Fermat and Emil</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo3Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 3 di Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo3Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo4Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 4 di Wizdoms riguardante Marley e Collette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo4Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 4 about Marley and Collette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo4Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 4 di Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo4Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo5Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 5 di Wizdoms riguardante Doug ed Huei</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo5Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 5 about Doug and Huei</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo5Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 5 di Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo5Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo6Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 6 di Wizdoms riguardante Allhoff e Carreras</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo6Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdos chapter 6 about Allhoff and Carreras</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo6Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 6 di Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo6Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo7Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 7 di Wizdoms riguardante Cromwell e Benjamin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo7Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 7 about Cromwell and Benjamin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo7Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 7 di Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo7Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 7</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo8Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo 8 di Wizdoms riguardante Mauchly e Charles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capitolo8Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 8 about Mauchly and Charles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo8Wizdoms</IRI>
+        <Literal xml:lang="it">Capitolo8 di Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capitolo8Wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms chapter 8</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Categoria</IRI>
+        <Literal xml:lang="it">Categoria di un manga come ad esempio shonen o shojo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Categoria</IRI>
+        <Literal xml:lang="en">Manga&apos;s category such as shonen or shojo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Categoria</IRI>
+        <Literal xml:lang="it">Categoria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Categoria</IRI>
+        <Literal xml:lang="en">Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Contesto</IRI>
+        <Literal xml:lang="it">Caratteristica di opere letterarie che riguarda l&apos;ambiente in cui si svolge la trama</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Contesto</IRI>
+        <Literal xml:lang="en">The environment where the plot  is developed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Contesto</IRI>
+        <Literal xml:lang="it">Contesto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Contesto</IRI>
+        <Literal xml:lang="en">Context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Doubt</IRI>
+        <Literal xml:lang="it">Manga intitolato &quot;Doubt&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Doubt</IRI>
+        <Literal xml:lang="en">Manga named &quot;Doubt&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Doubt</IRI>
+        <Literal xml:lang="en">Doubt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Doubt</IRI>
+        <Literal xml:lang="it">Doubt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fantastico</IRI>
+        <Literal xml:lang="en">Plot set in a fantastic world</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fantastico</IRI>
+        <Literal xml:lang="it">Trama ambientata in un mondo fantastico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fantastico</IRI>
+        <Literal xml:lang="en">Fantastic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fantastico</IRI>
+        <Literal xml:lang="it">Fantastico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Genere</IRI>
+        <Literal xml:lang="en">Plot type of a literary work</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Genere</IRI>
+        <Literal xml:lang="it">Tipo di trama di un&apos;opera letteraria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Genere</IRI>
+        <Literal xml:lang="it">Genere</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Genere</IRI>
+        <Literal xml:lang="en">Genre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Giappone</IRI>
+        <Literal xml:lang="en">Japanese nation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Giappone</IRI>
+        <Literal xml:lang="it">Nazione giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Giappone</IRI>
+        <Literal xml:lang="it">Giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Giappone</IRI>
+        <Literal xml:lang="en">Japan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Girl_from_the_other_side</IRI>
+        <Literal xml:lang="it">Manga intolato &quot;Girl from the other side&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Girl_from_the_other_side</IRI>
+        <Literal xml:lang="en">Manga named &quot;The girl from the other side&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Girl_from_the_other_side</IRI>
+        <Literal xml:lang="it">Girl from the other side</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Girl_from_the_other_side</IRI>
+        <Literal xml:lang="en">The girl from the other side</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Global_manga</IRI>
+        <Literal xml:lang="it">Global Manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Global_manga</IRI>
+        <Literal xml:lang="en">Manga created outside Japan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Global_manga</IRI>
+        <Literal xml:lang="it">Manga creati al di fuori del Giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Global_manga</IRI>
+        <Literal xml:lang="en">Global manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Infantile</IRI>
+        <Literal xml:lang="it">Il manga è rivolto ai bambini</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Infantile</IRI>
+        <Literal xml:lang="en">The manga is aimed at the children</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Infantile</IRI>
+        <Literal xml:lang="en">Children</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Infantile</IRI>
+        <Literal xml:lang="it">Infantile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge</IRI>
+        <Literal xml:lang="it">Manga intitolato &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge</IRI>
+        <Literal xml:lang="en">Manga named &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge</IRI>
+        <Literal xml:lang="en">Judge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge</IRI>
+        <Literal xml:lang="it">Judge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge1</IRI>
+        <Literal xml:lang="en">Number 1 tankobon of manga &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge1</IRI>
+        <Literal xml:lang="it">Tankobon numero 1 del manga &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge1</IRI>
+        <Literal xml:lang="en">Judge 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge1</IRI>
+        <Literal xml:lang="it">Judge 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge2</IRI>
+        <Literal xml:lang="en">Number 2 tankobon of manga &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge2</IRI>
+        <Literal xml:lang="it">Tankobon numero 2 del manga &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge2</IRI>
+        <Literal xml:lang="en">Judge 2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge2</IRI>
+        <Literal xml:lang="it">Judge 2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge3</IRI>
+        <Literal xml:lang="en">Number 3 tankobon of manga &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge3</IRI>
+        <Literal xml:lang="it">Tankobon numero 3 del manga &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge3</IRI>
+        <Literal xml:lang="en">Judge 3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge3</IRI>
+        <Literal xml:lang="it">Judge 3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge4</IRI>
+        <Literal xml:lang="en">Number 4 tankobon of manga &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge4</IRI>
+        <Literal xml:lang="it">Tankobon numero 4 del manga &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge4</IRI>
+        <Literal xml:lang="en">Judge 4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge4</IRI>
+        <Literal xml:lang="it">Judge 4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge5</IRI>
+        <Literal xml:lang="en">Number 5 tankobon of manga &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge5</IRI>
+        <Literal xml:lang="it">Tankobon numero 5 del manga &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge5</IRI>
+        <Literal xml:lang="en">Judge 5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge5</IRI>
+        <Literal xml:lang="it">Judge 5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge6</IRI>
+        <Literal xml:lang="en">Number 6 tankobon of manga &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judge6</IRI>
+        <Literal xml:lang="it">Tankobon numero 6 del manga &quot;Judge&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge6</IRI>
+        <Literal xml:lang="en">Judge 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judge6</IRI>
+        <Literal xml:lang="it">Judge 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Kodomo</IRI>
+        <Literal xml:lang="it">Categoria di manga per bambini</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Kodomo</IRI>
+        <Literal xml:lang="en">Manga&apos;s category for children</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kodomo</IRI>
+        <Literal xml:lang="it">Kodomo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Magico</IRI>
+        <Literal xml:lang="en">Plot about magic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Magico</IRI>
+        <Literal xml:lang="it">Trama che riguarda la magia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Magico</IRI>
+        <Literal xml:lang="it">Magia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Magico</IRI>
+        <Literal xml:lang="en">Magic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga</IRI>
+        <Literal xml:lang="en">Comic or graphic novel originating from Japan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga</IRI>
+        <Literal xml:lang="it">Fumetto di piccolo formato originario del Giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga</IRI>
+        <Literal xml:lang="en">Manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga</IRI>
+        <Literal xml:lang="it">Manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_blade</IRI>
+        <Literal xml:lang="it">Rivista di manga shonen chiamata Manga Blade</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_blade</IRI>
+        <Literal xml:lang="en">Shonen manga magazine named Manga Blade</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_blade</IRI>
+        <Literal xml:lang="en">Manga Blade</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_blade</IRI>
+        <Literal xml:lang="it">Manga Blade</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_boysLove</IRI>
+        <Literal xml:lang="en">Manga about love between boys</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_boysLove</IRI>
+        <Literal xml:lang="it">Manga riguardante amore tra maschi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_boysLove</IRI>
+        <Literal xml:lang="en">Boys love manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_boysLove</IRI>
+        <Literal xml:lang="it">Manga boys love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_con_volume_unico</IRI>
+        <Literal xml:lang="it">Manga composto da un singolo tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_con_volume_unico</IRI>
+        <Literal xml:lang="en">Manga containing 1 single tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_con_volume_unico</IRI>
+        <Literal xml:lang="en">Standalone manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_con_volume_unico</IRI>
+        <Literal xml:lang="it">Volume unico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_magazine</IRI>
+        <Literal xml:lang="en">Magazine in which mangas are serialized</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_magazine</IRI>
+        <Literal xml:lang="it">Rivista su cui vengono serializzati i manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_magazine</IRI>
+        <Literal xml:lang="en">Manga magazine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_magazine</IRI>
+        <Literal xml:lang="it">Rivista di manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_seinen</IRI>
+        <Literal xml:lang="it">Manga di categoria seinen cioè per adulti</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_seinen</IRI>
+        <Literal xml:lang="en">Seinen manga i.e. for adults</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_seinen</IRI>
+        <Literal xml:lang="it">Manga seinen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_seinen</IRI>
+        <Literal xml:lang="en">Seinen manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_shojo</IRI>
+        <Literal xml:lang="it">Manga di categoria shojo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_shojo</IRI>
+        <Literal xml:lang="en">Manga with shojo category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_shojo</IRI>
+        <Literal xml:lang="it">Manga shojo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_shojo</IRI>
+        <Literal xml:lang="en">Shojo manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_shonen</IRI>
+        <Literal xml:lang="it">Manga di categoria shonen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manga_shonen</IRI>
+        <Literal xml:lang="en">Manga with shonen category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_shonen</IRI>
+        <Literal xml:lang="it">Manga shonen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manga_shonen</IRI>
+        <Literal xml:lang="en">Shonen manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Mangaka</IRI>
+        <Literal xml:lang="en">Person who write or draw manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Mangaka</IRI>
+        <Literal xml:lang="it">Persona che scrive o disegna manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mangaka</IRI>
+        <Literal xml:lang="en">Mangaka</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mangaka</IRI>
+        <Literal xml:lang="it">Mangaka</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Mini_serie</IRI>
+        <Literal xml:lang="en">A series of manga containing less than 6 tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Mini_serie</IRI>
+        <Literal xml:lang="it">Una serie di manga che contiene meno di 6 tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mini_serie</IRI>
+        <Literal xml:lang="en">Mini serie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mini_serie</IRI>
+        <Literal xml:lang="it">Mini serie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nagabe</IRI>
+        <Literal xml:lang="it">Mangaka di nome Nagabe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nagabe</IRI>
+        <Literal xml:lang="en">Mangaka named Nagabe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nagabe</IRI>
+        <Literal xml:lang="en">Nagabe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nagabe</IRI>
+        <Literal xml:lang="it">Nagabe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nazione</IRI>
+        <Literal xml:lang="it">Area geografica ben definita, su cui si diffonde la sovranità</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nazione</IRI>
+        <Literal xml:lang="en">Well-defined geographical area, over which sovereignty spreads</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nazione</IRI>
+        <Literal xml:lang="en">Nation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nazione</IRI>
+        <Literal xml:lang="it">Nazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nazione_giapponese</IRI>
+        <Literal xml:lang="it">Giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nazione_giapponese</IRI>
+        <Literal xml:lang="en">Japan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nazione_giapponese</IRI>
+        <Literal xml:lang="en">Japanese nation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nazione_giapponese</IRI>
+        <Literal xml:lang="it">Nazione giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nazione_non_giapponese</IRI>
+        <Literal xml:lang="en">Any nation but Japan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nazione_non_giapponese</IRI>
+        <Literal xml:lang="it">Qualsiasi nazione che non sia il Giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nazione_non_giapponese</IRI>
+        <Literal xml:lang="it">Nazione non giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nazione_non_giapponese</IRI>
+        <Literal xml:lang="en">Non-Japanese nation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Opera</IRI>
+        <Literal xml:lang="en">Boys Love manga magazine named &quot;Opera&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Opera</IRI>
+        <Literal xml:lang="it">Rivista di manga Boys love chiamata &quot;Opera&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Opera</IRI>
+        <Literal xml:lang="en">Opera</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Opera</IRI>
+        <Literal xml:lang="it">Opera</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PenguinRumble</IRI>
+        <Literal xml:lang="it">Manga intitolato &quot;Penguin Rumble&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PenguinRumble</IRI>
+        <Literal xml:lang="en">Manga named &quot;Penguin Rumble&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PenguinRumble</IRI>
+        <Literal xml:lang="en">Penguin Rumble</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PenguinRumble</IRI>
+        <Literal xml:lang="it">Penguin Rumble</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Persona</IRI>
+        <Literal xml:lang="en">A person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Persona</IRI>
+        <Literal xml:lang="it">Una persona</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Persona</IRI>
+        <Literal xml:lang="en">Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Persona</IRI>
+        <Literal xml:lang="it">Persona</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Pubblico</IRI>
+        <Literal xml:lang="it">Gruppo di consumatori per cui è pensata una certa categoria di manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Pubblico</IRI>
+        <Literal xml:lang="en">Intended audience or readership of a publication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pubblico</IRI>
+        <Literal xml:lang="it">Pubblico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pubblico</IRI>
+        <Literal xml:lang="en">Target audience</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Scolastico</IRI>
+        <Literal xml:lang="en">Plot set in a scholastic context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Scolastico</IRI>
+        <Literal xml:lang="it">Trama ambientata in un contesto scolastico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Scolastico</IRI>
+        <Literal xml:lang="en">Scholastic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Scolastico</IRI>
+        <Literal xml:lang="it">Scolastico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Seinen</IRI>
+        <Literal xml:lang="it">Categoria di manga per adulti</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Seinen</IRI>
+        <Literal xml:lang="en">Manga&apos;s category for adults</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Seinen</IRI>
+        <Literal xml:lang="it">Seinen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sentimentale</IRI>
+        <Literal xml:lang="en">Sentimental plot</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sentimentale</IRI>
+        <Literal xml:lang="it">Trama sentimentale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sentimentale</IRI>
+        <Literal xml:lang="en">Sentimental</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sentimentale</IRI>
+        <Literal xml:lang="it">Sentimentale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Serie_lunga</IRI>
+        <Literal xml:lang="en">A series of manga containing at least 6 tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Serie_lunga</IRI>
+        <Literal xml:lang="it">Serie di manga che contiene almeno 6 tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Serie_lunga</IRI>
+        <Literal xml:lang="en">Long series</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Serie_lunga</IRI>
+        <Literal xml:lang="it">Serie lunga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Shojo</IRI>
+        <Literal xml:lang="it">Categoria di manga per ragazze adolescenti con trama sentimentale ed ambientato in un contesto scolastico o fantastico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Shojo</IRI>
+        <Literal xml:lang="en">Manga&apos;s category for teen girls with sentimental plot and set in a school or fantastic environment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Shojo</IRI>
+        <Literal xml:lang="it">Shojo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Shojo-ai</IRI>
+        <Literal xml:lang="it">Categoria di manga che tratta amore platonico tra donne</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Shojo-ai</IRI>
+        <Literal xml:lang="en">Manga&apos;s category in which love between girls is seen in a platonical way</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Shojo-ai</IRI>
+        <Literal xml:lang="it">Shojo - ai</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Shonen</IRI>
+        <Literal xml:lang="it">Categoria di manga per ragazzi adolescenti con trama d&apos;azione ed ambientato in un contesto sportivo o fantastico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Shonen</IRI>
+        <Literal xml:lang="en">Manga&apos;s category for teen boys with action plot and set in a sportive or fantastic environment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Shonen</IRI>
+        <Literal xml:lang="it">Shonen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Shonen-ai</IRI>
+        <Literal xml:lang="it">Categoria di manga in cui l&apos;amore tra uomini è visto in modo platonico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Shonen-ai</IRI>
+        <Literal xml:lang="en">Manga&apos;s category in which love between males is seen in a platonical way</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Shonen-ai</IRI>
+        <Literal xml:lang="en">Shonen - ai</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sportivo</IRI>
+        <Literal xml:lang="en">Plot set in a sports context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sportivo</IRI>
+        <Literal xml:lang="it">Trama ambientata in un contesto sportivo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sportivo</IRI>
+        <Literal xml:lang="it">Sportivo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sportivo</IRI>
+        <Literal xml:lang="en">Sports</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Svezia</IRI>
+        <Literal xml:lang="it">Nazione Svedese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Svezia</IRI>
+        <Literal xml:lang="en">Swedish Nation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Svezia</IRI>
+        <Literal xml:lang="it">Svezia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Svezia</IRI>
+        <Literal xml:lang="en">Sweden</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tankobon</IRI>
+        <Literal xml:lang="en">A manga&apos;s volume that contains several chapters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tankobon</IRI>
+        <Literal xml:lang="it">Singolo volume di un manga che raccoglie alcuni capitoli</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tankobon</IRI>
+        <Literal xml:lang="en">Tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tankobon</IRI>
+        <Literal xml:lang="it">Tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Wizdoms</IRI>
+        <Literal xml:lang="it">Manga intitolato &quot;Wizdoms&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Wizdoms</IRI>
+        <Literal xml:lang="en">Manga named &quot;The Wize Wize Beasts of the Wizarding Wizdoms&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Wizdoms</IRI>
+        <Literal xml:lang="en">The Wize Wize Beasts of the Wizarding Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Wizdoms</IRI>
+        <Literal xml:lang="it">Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Wizdoms1</IRI>
+        <Literal xml:lang="en">Single tankobon of manga &quot;The Wize Wize Beasts of the Wizarding Wizdoms&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Wizdoms1</IRI>
+        <Literal xml:lang="it">Volume unico del manga &quot;Wizdoms&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Wizdoms1</IRI>
+        <Literal xml:lang="en">The Wize Wize Beasts of the Wizarding Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Wizdoms1</IRI>
+        <Literal xml:lang="it">Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Yaoi</IRI>
+        <Literal xml:lang="it">Categoria di manga in cui l&apos;amore tra uomini è visto in modo fisico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Yaoi</IRI>
+        <Literal xml:lang="en">Manga&apos;s category in which love between males is seen in a physical way</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Yaoi</IRI>
+        <Literal xml:lang="it">Yaoi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#YoshikiTonogai</IRI>
+        <Literal xml:lang="it">Mangaka di nome Yoshiki Tonogai</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#YoshikiTonogai</IRI>
+        <Literal xml:lang="en">Mangaka named Yoshiki Tonogai</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#YoshikiTonogai</IRI>
+        <Literal xml:lang="en">Yoshiki Tonogai</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#YoshikiTonogai</IRI>
+        <Literal xml:lang="it">Yoshiki Tonogai</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Yuri</IRI>
+        <Literal xml:lang="it">Categoria di manga in cui l&apos;amore tra donne è visto in modo fisico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Yuri</IRI>
+        <Literal xml:lang="en">Manga&apos;s category in which love between girls is seen in a physical way</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Yuri</IRI>
+        <Literal xml:lang="it">Yuri</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ambientata_in_contesto</IRI>
+        <Literal xml:lang="en">(Manga&apos;s) Category has a plot set in a specific context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ambientata_in_contesto</IRI>
+        <Literal xml:lang="it">La trama di una categoria (di manga) è ambientata in uno specifico contesto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ambientata_in_contesto</IRI>
+        <Literal xml:lang="it">Ambientata in contesto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ambientata_in_contesto</IRI>
+        <Literal xml:lang="en">Set in context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#amore_omo_maschile</IRI>
+        <Literal xml:lang="en">Plot about omosexual boys love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#amore_omo_maschile</IRI>
+        <Literal xml:lang="it">Trama con genere amore omosessuale maschile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#amore_omo_maschile</IRI>
+        <Literal xml:lang="it">Amore omosessuale maschile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#amore_omo_maschile</IRI>
+        <Literal xml:lang="en">Boys omosexual love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#amore_platonico</IRI>
+        <Literal xml:lang="en">Plot about platonic love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#amore_platonico</IRI>
+        <Literal xml:lang="it">Trama riguardante l&apos;amore platonico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#amore_platonico</IRI>
+        <Literal xml:lang="it">Amore platonico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#amore_platonico</IRI>
+        <Literal xml:lang="en">Platonic love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#categoria_doubt</IRI>
+        <Literal xml:lang="it">Categoria del manga &apos;Doubt&apos;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#categoria_doubt</IRI>
+        <Literal xml:lang="en">Category of the manga called &apos;Doubt&apos;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#categoria_doubt</IRI>
+        <Literal xml:lang="it">Categoria di Doubt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#categoria_doubt</IRI>
+        <Literal xml:lang="en">Doubt&apos;s category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#categoria_girl_from</IRI>
+        <Literal xml:lang="it">Categoria del manga &apos;Girl from the other side&apos;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#categoria_girl_from</IRI>
+        <Literal xml:lang="en">Category of the manga called &apos;Girl from the other side&apos;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#categoria_girl_from</IRI>
+        <Literal xml:lang="it">Categoria di Girl from the other side</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#categoria_girl_from</IRI>
+        <Literal xml:lang="en">Category of Girl from the other side</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#categoria_wizdoms</IRI>
+        <Literal xml:lang="it">Categoria del manga &apos;Wizdoms&apos;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#categoria_wizdoms</IRI>
+        <Literal xml:lang="en">Category of the manga called &apos; Wizdoms&apos;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#categoria_wizdoms</IRI>
+        <Literal xml:lang="it">Categoria di Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#categoria_wizdoms</IRI>
+        <Literal xml:lang="en">Wizdoms category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#contesto_fantastico</IRI>
+        <Literal xml:lang="en">Plot set in fantastic context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#contesto_fantastico</IRI>
+        <Literal xml:lang="it">Trama ambientata in un contesto fantastico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#contesto_fantastico</IRI>
+        <Literal xml:lang="it">Contesto Fantastico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#contesto_fantastico</IRI>
+        <Literal xml:lang="en">Fantastic context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#disegna</IRI>
+        <Literal xml:lang="en">A mangaka draws a specific manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#disegna</IRI>
+        <Literal xml:lang="it">Un mangaka disegna uno specifico manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#disegna</IRI>
+        <Literal xml:lang="it">Disegna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#disegna</IRI>
+        <Literal xml:lang="en">Draws</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#disegnata_da</IRI>
+        <Literal xml:lang="en">A manga is drawn by a specific mangaka</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#disegnata_da</IRI>
+        <Literal xml:lang="it">Un manga è disegnato da uno specifico mangaka</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#disegnata_da</IRI>
+        <Literal xml:lang="it">Disegnato da</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#disegnata_da</IRI>
+        <Literal xml:lang="en">Drawn by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ha_categoria</IRI>
+        <Literal xml:lang="en">A manga belongs to a specific category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ha_categoria</IRI>
+        <Literal xml:lang="it">Un manga appartiene ad una categoria specifica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ha_categoria</IRI>
+        <Literal xml:lang="it">Ha categoria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ha_categoria</IRI>
+        <Literal xml:lang="en">Has category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ha_genere</IRI>
+        <Literal xml:lang="en">A category&apos;s plot belongs to a specific genre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ha_genere</IRI>
+        <Literal xml:lang="it">La trama di una categoria appartiene ad uno specifico genere</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ha_genere</IRI>
+        <Literal xml:lang="it">Ha genere</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ha_genere</IRI>
+        <Literal xml:lang="en">Has genre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_chapter</IRI>
+        <Literal xml:lang="en">A tankobon contains several chapters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_chapter</IRI>
+        <Literal xml:lang="it">Un tankobon contiene diversi capitoli</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_chapter</IRI>
+        <Literal xml:lang="it">Ha capitolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_chapter</IRI>
+        <Literal xml:lang="en">Has chapter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_tankobon</IRI>
+        <Literal xml:lang="en">A manga&apos;s series contains several tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_tankobon</IRI>
+        <Literal xml:lang="it">Una serie di manga è composta da diversi tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_tankobon</IRI>
+        <Literal xml:lang="it">Ha tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_tankobon</IRI>
+        <Literal xml:lang="en">Has tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#is_part_of_manga</IRI>
+        <Literal xml:lang="en">A tankobon is a part of a specific manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#is_part_of_manga</IRI>
+        <Literal xml:lang="it">Un tankobon fa parte di un certo manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_part_of_manga</IRI>
+        <Literal xml:lang="en">Is part of manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_part_of_manga</IRI>
+        <Literal xml:lang="it">è parte del manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#is_part_of_tankobon</IRI>
+        <Literal xml:lang="en">A chapter is contained in a specfic tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#is_part_of_tankobon</IRI>
+        <Literal xml:lang="it">Un capitolo è contenuto in un certo tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_part_of_tankobon</IRI>
+        <Literal xml:lang="en">Is part of tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_part_of_tankobon</IRI>
+        <Literal xml:lang="it">è parte del tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#magazine_ha_categoria</IRI>
+        <Literal xml:lang="en">A magazine is specialized in a manga&apos;s category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#magazine_ha_categoria</IRI>
+        <Literal xml:lang="it">Una rivista è specializzata in una certa categoria di manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#magazine_ha_categoria</IRI>
+        <Literal xml:lang="en">Magazine has category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#magazine_ha_categoria</IRI>
+        <Literal xml:lang="it">Rivista ha categoria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#manga_ha_contesto</IRI>
+        <Literal xml:lang="en">A manga is set in a context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#manga_ha_contesto</IRI>
+        <Literal xml:lang="it">Un manga è ambientato in un certo contesto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#manga_ha_contesto</IRI>
+        <Literal xml:lang="it">Manga ha contesto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#manga_ha_contesto</IRI>
+        <Literal xml:lang="en">Manga has context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#nazione_di_origine</IRI>
+        <Literal xml:lang="en">A manga is originally published in a specific Nation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#nazione_di_origine</IRI>
+        <Literal xml:lang="it">Un manga viene pubblicato originariamente in una certa Nazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#nazione_di_origine</IRI>
+        <Literal xml:lang="it">Nazione di origine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#nazione_di_origine</IRI>
+        <Literal xml:lang="en">Original Nation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numero_del_tankobon</IRI>
+        <Literal xml:lang="en">A tankobon is a manga&apos;s specific volume such as &apos;Judge 1&apos;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numero_del_tankobon</IRI>
+        <Literal xml:lang="it">Un tankobon è un volume specifico del manga come ad esempio &apos;Judge 1&apos;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numero_del_tankobon</IRI>
+        <Literal xml:lang="it">Numero del tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numero_del_tankobon</IRI>
+        <Literal xml:lang="en">Tankobon&apos;s number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numero_di_capitolo</IRI>
+        <Literal xml:lang="en">A chapter has a number that follows the cronological order</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numero_di_capitolo</IRI>
+        <Literal xml:lang="it">Un capitolo ha un suo numero che segue l&apos;ordine cronologico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numero_di_capitolo</IRI>
+        <Literal xml:lang="en">Chapter&apos;s number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numero_di_capitolo</IRI>
+        <Literal xml:lang="it">Numero del capitolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numero_di_volumi</IRI>
+        <Literal xml:lang="en">A manga contains a certain number of tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numero_di_volumi</IRI>
+        <Literal xml:lang="it">Un manga è composto da un certo numero di tankobon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numero_di_volumi</IRI>
+        <Literal xml:lang="en">Number of volumes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numero_di_volumi</IRI>
+        <Literal xml:lang="it">Numero di volumi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#orientata_a_pubblico</IRI>
+        <Literal xml:lang="en">A manga&apos;s category is aimed at a specific audience</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#orientata_a_pubblico</IRI>
+        <Literal xml:lang="it">Una categoria è orientata verso uno specifico pubblico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#orientata_a_pubblico</IRI>
+        <Literal xml:lang="en">Aimed at audience</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#orientata_a_pubblico</IRI>
+        <Literal xml:lang="it">Orientata ad un pubblico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#pubblicata_nel_periodo</IRI>
+        <Literal xml:lang="en">A manga&apos;s publication takes a certain period of time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#pubblicata_nel_periodo</IRI>
+        <Literal xml:lang="it">La pubblicazione di un manga avviene un certo periodo di tempo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#pubblicata_nel_periodo</IRI>
+        <Literal xml:lang="it">Pubblicata nel periodo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#pubblicata_nel_periodo</IRI>
+        <Literal xml:lang="en">Published in period</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#scritta_da</IRI>
+        <Literal xml:lang="en">A manga is written by a specific mangaka</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#scritta_da</IRI>
+        <Literal xml:lang="it">Un manga è scritto da uno specifico mangaka</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#scritta_da</IRI>
+        <Literal xml:lang="it">Scritto da</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#scritta_da</IRI>
+        <Literal xml:lang="en">Written by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#scrive</IRI>
+        <Literal xml:lang="en">A mangaka writes a specific manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#scrive</IRI>
+        <Literal xml:lang="it">Un mangaka scrive uno specifico manga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#scrive</IRI>
+        <Literal xml:lang="it">Scrive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#scrive</IRI>
+        <Literal xml:lang="en">Writes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#serializzato_su</IRI>
+        <Literal xml:lang="en">A manga is serialized in a specific magazine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#serializzato_su</IRI>
+        <Literal xml:lang="it">Un manga è serializzato su una specifica rivista</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#serializzato_su</IRI>
+        <Literal xml:lang="en">Is serialized in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#serializzato_su</IRI>
+        <Literal xml:lang="it">Serializzato su</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#shonen</IRI>
+        <Literal xml:lang="it">Categoria di manga per ragazzi adolescenti con trama d&apos;azione ed ambientato in un contesto sportivo o fantastico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#shonen</IRI>
+        <Literal xml:lang="en">Manga&apos;s category for teen boys with action plot and set in a sportive or fantastic environment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#shonen</IRI>
+        <Literal xml:lang="en">Shonen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#shonen</IRI>
+        <Literal xml:lang="it">Shonen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sottotitolo</IRI>
+        <Literal xml:lang="en">A manga could have a subtitle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sottotitolo</IRI>
+        <Literal xml:lang="it">Un manga può avere un sottotitolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sottotitolo</IRI>
+        <Literal xml:lang="it">Sottotitolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sottotitolo</IRI>
+        <Literal xml:lang="en">Subtitle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#stato_in_patria</IRI>
+        <Literal xml:lang="en">A manga&apos;s series could be terminated or continuing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#stato_in_patria</IRI>
+        <Literal xml:lang="it">Una serie di manga può essere terminata oppure ancora in fase di pubblicazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#stato_in_patria</IRI>
+        <Literal xml:lang="it">Stato in patria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#stato_in_patria</IRI>
+        <Literal xml:lang="en">Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tempo_girl_from</IRI>
+        <Literal xml:lang="it">Periodo in cui è stato pubblicato il manga &quot;Girl From The Other Side&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tempo_girl_from</IRI>
+        <Literal xml:lang="en">When &quot;The Girl From the Other Side&quot; was published</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tempo_girl_from</IRI>
+        <Literal xml:lang="en">Publication time of The girl from the other side</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tempo_girl_from</IRI>
+        <Literal xml:lang="it">Tempo di pubblicazione di Girl From The Other Side</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#titolo</IRI>
+        <Literal xml:lang="en">A manga could have different titles in different Nations, a chapter could have a title as well</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#titolo</IRI>
+        <Literal xml:lang="it">Un manga ha titoli diversi a seconda della Nazione, anche un capitolo può avere un titolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#titolo</IRI>
+        <Literal xml:lang="en">Title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#titolo</IRI>
+        <Literal xml:lang="it">Titolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#titolo_originale</IRI>
+        <Literal xml:lang="en">A manga has a title in its original Nation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#titolo_originale</IRI>
+        <Literal xml:lang="it">Un manga ha un titolo nella sua Nazione di origine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#titolo_originale</IRI>
+        <Literal xml:lang="en">Original title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#titolo_originale</IRI>
+        <Literal xml:lang="it">Titolo originale</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
