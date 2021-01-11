@@ -7,10 +7,14 @@
 @base <http://modSem/miriam/ontologies/2020/mangaWorld/Inferenze> .
 
 <http://modSem/miriam/ontologies/2020/mangaWorld/Inferenze> rdf:type owl:Ontology ;
-                                                             <http://purl.org/dc/elements/1.1/creator> "Miriam Fasciana"@it ;
-                                                             <http://purl.org/dc/elements/1.1/date> "2020-01-07"@en ;
-                                                             <http://purl.org/dc/elements/1.1/description> "Ontologia sul dominio dei manga focalizzata sulle categorie"@it ;
-                                                             <http://purl.org/dc/elements/1.1/title> "Manga ontology"@en ;
+                                                             <http://purl.org/dc/elements/1.1/creator> "Miriam Fasciana"@en ,
+                                                                                                       "Miriam Fasciana"@it ;
+                                                             <http://purl.org/dc/elements/1.1/date> "2020-01-07"@en ,
+                                                                                                    "2020-01-07"@it ;
+                                                             <http://purl.org/dc/elements/1.1/description> "Manga ontology specialized on categories"@en ,
+                                                                                                           "Ontologia sul dominio dei manga focalizzata sulle categorie"@it ;
+                                                             <http://purl.org/dc/elements/1.1/title> "Manga ontology"@en ,
+                                                                                                     "Ontologia sui manga"@it ;
                                                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "manga" ;
                                                              <http://purl.org/vocab/vann/preferredNamespaceUri> "http://modSem/miriam/ontologies/2020/mangaWorld" ;
                                                              <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "What is the end time of this interval? What is the starting time of this interval? What is the date of this time interval?"^^xsd:string ,
@@ -254,6 +258,14 @@ Ranges of datatype properties are not indicated, because otherwise specializing 
 #    Data properties
 #################################################################
 
+###  http://modSem/miriam/ontologies/2020/mangaWorld#nome_rivista
+<http://modSem/miriam/ontologies/2020/mangaWorld#nome_rivista> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:comment "A manga magazine has a name"@en ,
+                                                                            "Una rivista di manga ha un nome"@it ;
+                                                               rdfs:label "Magazine name"@en ,
+                                                                          "Nome rivista"@it .
+
+
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#numero_del_tankobon
 <http://modSem/miriam/ontologies/2020/mangaWorld#numero_del_tankobon> rdf:type owl:DatatypeProperty ,
                                                                                owl:FunctionalProperty ;
@@ -495,7 +507,7 @@ Ranges of datatype properties are not indicated, because otherwise specializing 
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#Genere
 <http://modSem/miriam/ontologies/2020/mangaWorld#Genere> rdf:type owl:Class ;
-                                                         rdfs:comment "Plot type of a literary work"@en ,
+                                                         rdfs:comment "Literary genre"@en ,
                                                                       "Tipo di trama di un'opera letteraria"@it ;
                                                          rdfs:label "Genere"@it ,
                                                                     "Genre"@en .
@@ -528,7 +540,8 @@ Ranges of datatype properties are not indicated, because otherwise specializing 
                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Shonen> ;
                                                          rdfs:comment "Categoria di manga per bambini"@it ,
                                                                       "Manga's category for children"@en ;
-                                                         rdfs:label "Kodomo"@it .
+                                                         rdfs:label "Kodomo"@en ,
+                                                                    "Kodomo"@it .
 
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#Magico
@@ -685,7 +698,8 @@ Ranges of datatype properties are not indicated, because otherwise specializing 
                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Shonen> ;
                                                          rdfs:comment "Categoria di manga per adulti"@it ,
                                                                       "Manga's category for adults"@en ;
-                                                         rdfs:label "Seinen"@it .
+                                                         rdfs:label "Seinen"@en ,
+                                                                    "Seinen"@it .
 
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#Sentimentale
@@ -713,7 +727,8 @@ Ranges of datatype properties are not indicated, because otherwise specializing 
                                                         owl:disjointWith <http://modSem/miriam/ontologies/2020/mangaWorld#Shonen> ;
                                                         rdfs:comment "Categoria di manga per ragazze adolescenti con trama sentimentale ed ambientato in un contesto scolastico o fantastico"@it ,
                                                                      "Manga's category for teen girls with sentimental plot and set in a school or fantastic environment"@en ;
-                                                        rdfs:label "Shojo"@it .
+                                                        rdfs:label "Shojo"@en ,
+                                                                   "Shojo"@it .
 
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#Shojo-ai
@@ -721,7 +736,8 @@ Ranges of datatype properties are not indicated, because otherwise specializing 
                                                            rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ;
                                                            rdfs:comment "Categoria di manga che tratta amore platonico tra donne"@it ,
                                                                         "Manga's category in which love between girls is seen in a platonical way"@en ;
-                                                           rdfs:label "Shojo - ai"@it .
+                                                           rdfs:label "Shojo - ai"@en ,
+                                                                      "Shojo - ai"@it .
 
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#Shonen
@@ -729,15 +745,17 @@ Ranges of datatype properties are not indicated, because otherwise specializing 
                                                          rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ;
                                                          rdfs:comment "Categoria di manga per ragazzi adolescenti con trama d'azione ed ambientato in un contesto sportivo o fantastico"@it ,
                                                                       "Manga's category for teen boys with action plot and set in a sportive or fantastic environment"@en ;
-                                                         rdfs:label "Shonen"@it .
+                                                         rdfs:label "Shonen"@en ,
+                                                                    "Shonen"@it .
 
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#Shonen-ai
 <http://modSem/miriam/ontologies/2020/mangaWorld#Shonen-ai> rdf:type owl:Class ;
                                                             rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> ;
                                                             rdfs:comment "Categoria di manga in cui l'amore tra uomini è visto in modo platonico"@it ,
-                                                                         "Manga's category in which love between males is seen in a platonical way"@en ;
-                                                            rdfs:label "Shonen - ai"@en .
+                                                                         "Manga's category in which love between males is seen in a platonic way"@en ;
+                                                            rdfs:label "Shonen - ai"@en ,
+                                                                       "Shonen - ai"@it .
 
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#Sportivo
@@ -762,7 +780,8 @@ Ranges of datatype properties are not indicated, because otherwise specializing 
                                                        rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> ;
                                                        rdfs:comment "Categoria di manga in cui l'amore tra uomini è visto in modo fisico"@it ,
                                                                     "Manga's category in which love between males is seen in a physical way"@en ;
-                                                       rdfs:label "Yaoi"@it .
+                                                       rdfs:label "Yaoi"@en ,
+                                                                  "Yaoi"@it .
 
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#Yuri
@@ -770,7 +789,8 @@ Ranges of datatype properties are not indicated, because otherwise specializing 
                                                        rdfs:subClassOf <http://modSem/miriam/ontologies/2020/mangaWorld#Categoria> ;
                                                        rdfs:comment "Categoria di manga in cui l'amore tra donne è visto in modo fisico"@it ,
                                                                     "Manga's category in which love between girls is seen in a physical way"@en ;
-                                                       rdfs:label "Yuri"@it .
+                                                       rdfs:label "Yuri"@en ,
+                                                                  "Yuri"@it .
 
 
 ###  http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval
@@ -789,6 +809,17 @@ It should be used when you want to talk about time as an object having some char
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://dbpedia.org/Gangan_Comics__Monthly_Shōnen_Gangan__1
+<http://dbpedia.org/Gangan_Comics__Monthly_Shōnen_Gangan__1> rdf:type owl:NamedIndividual ,
+                                                                      <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_magazine> ;
+                                                             <http://modSem/miriam/ontologies/2020/mangaWorld#magazine_ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#shonen> ;
+                                                             <http://modSem/miriam/ontologies/2020/mangaWorld#nome_rivista> "Monthly Shonen Gangan"^^xsd:string ;
+                                                             rdfs:comment "Monthly shonen gangan nell'ontologia Dublin Core"@it ,
+                                                                          "Monthly shonen gangan on DBpedia"@en ;
+                                                             rdfs:label "Monthly Shōnen Gangan"@en ,
+                                                                        "Monthly Shōnen Gangan"@it .
+
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove
 <http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> rdf:type owl:NamedIndividual ,
@@ -913,11 +944,14 @@ It should be used when you want to talk about time as an object having some char
 <http://modSem/miriam/ontologies/2020/mangaWorld#Doubt> rdf:type owl:NamedIndividual ,
                                                                  <http://dbpedia.org/ontology/Manga> ,
                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ,
+                                                                 <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_shonen> ,
                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Mini_serie> ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#disegnata_da> <http://modSem/miriam/ontologies/2020/mangaWorld#YoshikiTonogai> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#shonen> ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#pubblicata_nel_periodo> <http://modSem/miriam/ontologies/2020/mangaWorld#tempo_doubt> ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#scritta_da> <http://modSem/miriam/ontologies/2020/mangaWorld#YoshikiTonogai> ;
-                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#serializzato_su> <http://modSem/miriam/ontologies/2020/mangaWorld#Monthly_Shōnen_Gangan> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#serializzato_su> <http://dbpedia.org/Gangan_Comics__Monthly_Shōnen_Gangan__1> ,
+                                                                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#Monthly_Shōnen_Gangan> ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#numero_di_volumi> 4 ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#stato_in_patria> "Completato"^^xsd:string ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#titolo> "Doubt"@it ;
@@ -940,9 +974,11 @@ It should be used when you want to talk about time as an object having some char
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#Girl_from_the_other_side
 <http://modSem/miriam/ontologies/2020/mangaWorld#Girl_from_the_other_side> rdf:type owl:NamedIndividual ,
                                                                                     <http://dbpedia.org/ontology/Manga> ,
-                                                                                    <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ;
+                                                                                    <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ,
+                                                                                    <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_shonen> ;
                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#disegnata_da> <http://modSem/miriam/ontologies/2020/mangaWorld#Nagabe> ;
-                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#categoria_girl_from> ;
+                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#categoria_girl_from> ,
+                                                                                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#shonen> ;
                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#manga_ha_contesto> <http://modSem/miriam/ontologies/2020/mangaWorld#contesto_fantastico> ;
                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#nazione_di_origine> <http://modSem/miriam/ontologies/2020/mangaWorld#Giappone> ;
                                                                            <http://modSem/miriam/ontologies/2020/mangaWorld#pubblicata_nel_periodo> <http://modSem/miriam/ontologies/2020/mangaWorld#tempo_girl_from> ;
@@ -963,8 +999,10 @@ It should be used when you want to talk about time as an object having some char
 <http://modSem/miriam/ontologies/2020/mangaWorld#Judge> rdf:type owl:NamedIndividual ,
                                                                  <http://dbpedia.org/ontology/Manga> ,
                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Manga> ,
+                                                                 <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_shonen> ,
                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Serie_lunga> ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#disegnata_da> <http://modSem/miriam/ontologies/2020/mangaWorld#YoshikiTonogai> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#shonen> ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#has_tankobon> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge1> ,
                                                                                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#Judge2> ,
                                                                                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#Judge3> ,
@@ -973,7 +1011,8 @@ It should be used when you want to talk about time as an object having some char
                                                                                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#Judge6> ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#pubblicata_nel_periodo> <http://modSem/miriam/ontologies/2020/mangaWorld#tempo_judge> ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#scritta_da> <http://modSem/miriam/ontologies/2020/mangaWorld#YoshikiTonogai> ;
-                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#serializzato_su> <http://modSem/miriam/ontologies/2020/mangaWorld#Monthly_Shōnen_Gangan> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#serializzato_su> <http://dbpedia.org/Gangan_Comics__Monthly_Shōnen_Gangan__1> ,
+                                                                                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#Monthly_Shōnen_Gangan> ;
                                                         <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> <http://modSem/miriam/ontologies/2020/mangaWorld#Judge1> ,
                                                                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Judge2> ,
                                                                                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#Judge3> ,
@@ -1065,6 +1104,7 @@ It should be used when you want to talk about time as an object having some char
 <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_blade> rdf:type owl:NamedIndividual ,
                                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_magazine> ;
                                                               <http://modSem/miriam/ontologies/2020/mangaWorld#magazine_ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#shonen> ;
+                                                              <http://modSem/miriam/ontologies/2020/mangaWorld#nome_rivista> "Manga Blade"^^xsd:string ;
                                                               rdfs:comment "Rivista di manga shonen chiamata Manga Blade"@it ,
                                                                            "Shonen manga magazine named Manga Blade"@en ;
                                                               rdfs:label "Manga Blade"@en ,
@@ -1075,6 +1115,7 @@ It should be used when you want to talk about time as an object having some char
 <http://modSem/miriam/ontologies/2020/mangaWorld#Monthly_Shōnen_Gangan> rdf:type owl:NamedIndividual ,
                                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_magazine> ;
                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#magazine_ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#shonen> ;
+                                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#nome_rivista> "Monthly Shonen Gangan"^^xsd:string ;
                                                                         rdfs:comment "Rivista di manga shonen chiamata Manga Blade"@it ,
                                                                                      "Shonen manga magazine named Manga Blade"@en ;
                                                                         rdfs:label "Monthly Shōnen Gangan"@en ,
@@ -1101,6 +1142,7 @@ It should be used when you want to talk about time as an object having some char
 <http://modSem/miriam/ontologies/2020/mangaWorld#Opera> rdf:type owl:NamedIndividual ,
                                                                  <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_magazine> ;
                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#magazine_ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> ;
+                                                        <http://modSem/miriam/ontologies/2020/mangaWorld#nome_rivista> "Opera"^^xsd:string ;
                                                         rdfs:comment "Boys Love manga magazine named \"Opera\""@en ,
                                                                      "Rivista di manga Boys love chiamata \"Opera\""@it ;
                                                         rdfs:label "Opera"@en ,
@@ -1142,10 +1184,12 @@ It should be used when you want to talk about time as an object having some char
                                                                    <http://modSem/miriam/ontologies/2020/mangaWorld#Manga_con_volume_unico> ,
                                                                    <http://modSem/miriam/ontologies/2020/mangaWorld#Mini_serie> ;
                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#disegnata_da> <http://modSem/miriam/ontologies/2020/mangaWorld#Nagabe> ;
-                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#categoria_wizdoms> ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#ha_categoria> <http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> ,
+                                                                                                                         <http://modSem/miriam/ontologies/2020/mangaWorld#categoria_wizdoms> ;
                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#has_tankobon> <http://modSem/miriam/ontologies/2020/mangaWorld#Wizdoms1> ;
                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#manga_ha_contesto> <http://modSem/miriam/ontologies/2020/mangaWorld#contesto_fantastico> ;
                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#nazione_di_origine> <http://modSem/miriam/ontologies/2020/mangaWorld#Giappone> ;
+                                                          <http://modSem/miriam/ontologies/2020/mangaWorld#pubblicata_nel_periodo> <http://modSem/miriam/ontologies/2020/mangaWorld#tempo_wizdoms> ;
                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#scritta_da> <http://modSem/miriam/ontologies/2020/mangaWorld#Nagabe> ;
                                                           <http://modSem/miriam/ontologies/2020/mangaWorld#serializzato_su> <http://modSem/miriam/ontologies/2020/mangaWorld#Opera> ;
                                                           <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> <http://modSem/miriam/ontologies/2020/mangaWorld#Capitolo1Wizdoms> ,
@@ -1317,12 +1361,25 @@ It should be used when you want to talk about time as an object having some char
                                                                          "Tempo di pubblicazione di Judge"@it .
 
 
+###  http://modSem/miriam/ontologies/2020/mangaWorld#tempo_wizdoms
+<http://modSem/miriam/ontologies/2020/mangaWorld#tempo_wizdoms> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> ;
+                                                                <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate> 2018 ;
+                                                                <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalEndDate> 2018 ;
+                                                                <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate> 2018 ;
+                                                                rdfs:comment "Periodo in cui è stato pubblicato il manga \"Wizdoms\""@it ,
+                                                                             "When \"The Wize Wize Beasts of the Wizarding Wizdoms\" was published"@en ;
+                                                                rdfs:label "Publication time of The Wize Wize Beasts of the Wizarding Wizdoms"@en ,
+                                                                           "Tempo di pubblicazione di Wizdoms"@it .
+
+
 #################################################################
 #    Annotations
 #################################################################
 
 <http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove> rdfs:comment "Categoria di manga in cui la storia riguarda l'amore tra maschi"@it ;
-                                                           rdfs:label "Boys love"@en ;
+                                                           rdfs:label "Boys Love"@it ,
+                                                                      "Boys love"@en ;
                                                            rdfs:comment "Manga's category in which the story is about male gay love"@en .
 
 

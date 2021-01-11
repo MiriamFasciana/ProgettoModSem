@@ -7,13 +7,21 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://modSem/miriam/ontologies/2020/mangaWorld">
     <Prefix name="" IRI="http://modSem/miriam/ontologies/2020/mangaWorld"/>
+    <Prefix name="db" IRI="http://dbpedia.org/"/>
+    <Prefix name="dbr" IRI="http://dbpedia.org/resource/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="time" IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#"/>
+    <Prefix name="manga" IRI="http://modSem/miriam/ontologies/2020/mangaWorld#"/>
     <Import>http://www.ontologydesignpatterns.org/cp/owl/partof.owl</Import>
     <Import>http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="en">Miriam Fasciana</Literal>
+    </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <Literal xml:lang="it">Miriam Fasciana</Literal>
@@ -23,12 +31,24 @@
         <Literal xml:lang="en">2020-01-07</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <Literal xml:lang="it">2020-01-07</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <Literal xml:lang="en">Manga ontology specialized on categories</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
         <Literal xml:lang="it">Ontologia sul dominio dei manga focalizzata sulle categorie</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
         <Literal xml:lang="en">Manga ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="it">Ontologia sui manga</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
@@ -245,6 +265,9 @@
         <ObjectProperty IRI="#serializzato_su"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#nome_rivista"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#numero_del_tankobon"/>
     </Declaration>
     <Declaration>
@@ -264,6 +287,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#titolo_originale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="db:Gangan_Comics__Monthly_Shōnen_Gangan__1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BoysLove"/>
@@ -377,6 +403,9 @@
         <NamedIndividual IRI="#tempo_judge"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#tempo_wizdoms"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
     </Declaration>
     <Declaration>
@@ -393,6 +422,9 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="http://dbpedia.org/ontology/Manga"/>
@@ -422,18 +454,6 @@
             <ObjectProperty IRI="#ha_categoria"/>
             <Class IRI="#BoysLove"/>
         </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Manga_con_volume_unico"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#numero_di_volumi"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
-                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Manga_seinen"/>
@@ -472,12 +492,6 @@
         <Class IRI="#Nazione_giapponese"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Giappone"/>
-        </ObjectOneOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Nazione_non_giapponese"/>
-        <ObjectOneOf>
-            <NamedIndividual IRI="#Svezia"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -761,6 +775,10 @@
         <NamedIndividual IRI="#BoysLove"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Manga"/>
+        <NamedIndividual IRI="#Judge"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Manga_magazine"/>
         <NamedIndividual IRI="#Opera"/>
     </ClassAssertion>
@@ -972,11 +990,6 @@
         <NamedIndividual IRI="#shonen"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#magazine_ha_categoria"/>
-        <NamedIndividual IRI="#Monthly_Shōnen_Gangan"/>
-        <NamedIndividual IRI="#shonen"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#disegna"/>
         <NamedIndividual IRI="#Nagabe"/>
         <NamedIndividual IRI="#Wizdoms"/>
@@ -1005,6 +1018,11 @@
         <ObjectProperty IRI="#nazione_di_origine"/>
         <NamedIndividual IRI="#Wizdoms"/>
         <NamedIndividual IRI="#Giappone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+        <NamedIndividual IRI="#Wizdoms"/>
+        <NamedIndividual IRI="#tempo_wizdoms"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#serializzato_su"/>
@@ -1212,6 +1230,21 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#nome_rivista"/>
+        <NamedIndividual IRI="#Manga_blade"/>
+        <Literal>Manga Blade</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nome_rivista"/>
+        <NamedIndividual IRI="#Monthly_Shōnen_Gangan"/>
+        <Literal>Monthly Shonen Gangan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nome_rivista"/>
+        <NamedIndividual IRI="#Opera"/>
+        <Literal>Opera</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#numero_di_volumi"/>
         <NamedIndividual IRI="#PenguinRumble"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
@@ -1267,29 +1300,39 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalEndDate"/>
+        <DataProperty abbreviatedIRI="time:hasIntervalEndDate"/>
         <NamedIndividual IRI="#tempo_doubt"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2009</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate"/>
+        <DataProperty abbreviatedIRI="time:hasIntervalStartDate"/>
         <NamedIndividual IRI="#tempo_doubt"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2007</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate"/>
+        <DataProperty abbreviatedIRI="time:hasIntervalStartDate"/>
         <NamedIndividual IRI="#tempo_girl_from"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2015</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalEndDate"/>
+        <DataProperty abbreviatedIRI="time:hasIntervalEndDate"/>
         <NamedIndividual IRI="#tempo_judge"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2012</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate"/>
+        <DataProperty abbreviatedIRI="time:hasIntervalStartDate"/>
         <NamedIndividual IRI="#tempo_judge"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2010</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="time:hasIntervalEndDate"/>
+        <NamedIndividual IRI="#tempo_wizdoms"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2018</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="time:hasIntervalStartDate"/>
+        <NamedIndividual IRI="#tempo_wizdoms"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2018</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#has_chapter"/>
@@ -1441,7 +1484,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#pubblicata_nel_periodo"/>
-        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"/>
+        <Class abbreviatedIRI="time:TimeInterval"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#scritta_da"/>
@@ -1468,6 +1511,10 @@
     <FunctionalDataProperty>
         <DataProperty IRI="#titolo_originale"/>
     </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nome_rivista"/>
+        <Class IRI="#Manga_magazine"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#numero_del_tankobon"/>
         <Class IRI="#Tankobon"/>
@@ -1503,6 +1550,10 @@
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyRange>
+        <DataProperty IRI="#nome_rivista"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#numero_del_tankobon"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
@@ -1533,6 +1584,210 @@
         <DataProperty IRI="#titolo_originale"/>
         <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
     </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Capire la categoria di un manga tramite il magazine su cui viene serializzato</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Manga"/>
+                <Variable IRI="#m"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#serializzato_su"/>
+                <Variable IRI="#m"/>
+                <Variable IRI="#r"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#magazine_ha_categoria"/>
+                <Variable IRI="#r"/>
+                <Variable IRI="#c"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#ha_categoria"/>
+                <Variable IRI="#m"/>
+                <Variable IRI="#c"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Capire che un manga è completato se ha una data di fine pubblicazione</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Manga"/>
+                <Variable IRI="#m"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+                <Variable IRI="#m"/>
+                <Variable IRI="#t"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="time:hasIntervalEndDate"/>
+                <Variable IRI="#t"/>
+                <Variable IRI="#e"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#stato_in_patria"/>
+                <Variable IRI="#m"/>
+                <Literal>Completato</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Capire che un volume unico è un manga con 1 solo volume</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Manga"/>
+                <Variable IRI="#m"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numero_di_volumi"/>
+                <Variable IRI="#m"/>
+                <Variable IRI="#n"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#n"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Manga_con_volume_unico"/>
+                <Variable IRI="#m"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Allineare la rivista Monthly Shonen Gangan con quella presente su DBpedia</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S5</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Manga_magazine"/>
+                <Variable IRI="#m"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#nome_rivista"/>
+                <Variable IRI="#m"/>
+                <Variable IRI="#n"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#containsIgnoreCase">
+                <Variable IRI="#n"/>
+                <Literal>monthly shonen gangan</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <SameIndividualAtom>
+                <Variable IRI="#m"/>
+                <NamedIndividual abbreviatedIRI="db:Gangan_Comics__Monthly_Shōnen_Gangan__1"/>
+            </SameIndividualAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Se il nome di un manga magazine contiene la parola shonen allora serializza manga di categoria shonen</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S4</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Manga_magazine"/>
+                <Variable IRI="#m"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#nome_rivista"/>
+                <Variable IRI="#m"/>
+                <Variable IRI="#n"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#containsIgnoreCase">
+                <Variable IRI="#n"/>
+                <Literal>shonen</Literal>
+            </BuiltInAtom>
+            <ClassAtom>
+                <Class IRI="#Shonen"/>
+                <Variable IRI="#s"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#magazine_ha_categoria"/>
+                <Variable IRI="#m"/>
+                <Variable IRI="#s"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>db:Gangan_Comics__Monthly_Shōnen_Gangan__1</AbbreviatedIRI>
+        <Literal xml:lang="it">Monthly shonen gangan nell&apos;ontologia Dublin Core</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>db:Gangan_Comics__Monthly_Shōnen_Gangan__1</AbbreviatedIRI>
+        <Literal xml:lang="en">Monthly shonen gangan on DBpedia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>db:Gangan_Comics__Monthly_Shōnen_Gangan__1</AbbreviatedIRI>
+        <Literal xml:lang="en">Monthly Shōnen Gangan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>db:Gangan_Comics__Monthly_Shōnen_Gangan__1</AbbreviatedIRI>
+        <Literal xml:lang="it">Monthly Shōnen Gangan</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://https://www.wikidata.org/wiki/Q191633</IRI>
@@ -1747,6 +2002,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#BoysLove</IRI>
         <Literal xml:lang="en">Manga&apos;s category in which the story is about male gay love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BoysLove</IRI>
+        <Literal xml:lang="it">Boys Love</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2016,7 +2276,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Genere</IRI>
-        <Literal xml:lang="en">Plot type of a literary work</Literal>
+        <Literal xml:lang="en">Literary genre</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2262,6 +2522,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Kodomo</IRI>
         <Literal xml:lang="en">Manga&apos;s category for children</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kodomo</IRI>
+        <Literal xml:lang="en">Kodomo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2701,6 +2966,11 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Seinen</IRI>
+        <Literal xml:lang="en">Seinen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Seinen</IRI>
         <Literal xml:lang="it">Seinen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -2756,6 +3026,11 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Shojo</IRI>
+        <Literal xml:lang="en">Shojo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Shojo</IRI>
         <Literal xml:lang="it">Shojo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -2767,6 +3042,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Shojo-ai</IRI>
         <Literal xml:lang="en">Manga&apos;s category in which love between girls is seen in a platonical way</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Shojo-ai</IRI>
+        <Literal xml:lang="en">Shojo - ai</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2786,6 +3066,11 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Shonen</IRI>
+        <Literal xml:lang="en">Shonen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Shonen</IRI>
         <Literal xml:lang="it">Shonen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -2796,12 +3081,17 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Shonen-ai</IRI>
-        <Literal xml:lang="en">Manga&apos;s category in which love between males is seen in a platonical way</Literal>
+        <Literal xml:lang="en">Manga&apos;s category in which love between males is seen in a platonic way</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Shonen-ai</IRI>
         <Literal xml:lang="en">Shonen - ai</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Shonen-ai</IRI>
+        <Literal xml:lang="it">Shonen - ai</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2916,6 +3206,11 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Yaoi</IRI>
+        <Literal xml:lang="en">Yaoi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Yaoi</IRI>
         <Literal xml:lang="it">Yaoi</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -2947,6 +3242,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Yuri</IRI>
         <Literal xml:lang="en">Manga&apos;s category in which love between girls is seen in a physical way</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Yuri</IRI>
+        <Literal xml:lang="en">Yuri</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3295,6 +3595,26 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#nome_rivista</IRI>
+        <Literal xml:lang="en">A manga magazine has a name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#nome_rivista</IRI>
+        <Literal xml:lang="it">Una rivista di manga ha un nome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#nome_rivista</IRI>
+        <Literal xml:lang="en">Magazine name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#nome_rivista</IRI>
+        <Literal xml:lang="it">Nome rivista</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#numero_del_tankobon</IRI>
         <Literal xml:lang="en">A tankobon is a manga&apos;s specific volume such as &apos;Judge 1&apos;</Literal>
     </AnnotationAssertion>
@@ -3572,6 +3892,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#tempo_judge</IRI>
         <Literal xml:lang="it">Tempo di pubblicazione di Judge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tempo_wizdoms</IRI>
+        <Literal xml:lang="it">Periodo in cui è stato pubblicato il manga &quot;Wizdoms&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tempo_wizdoms</IRI>
+        <Literal xml:lang="en">When &quot;The Wize Wize Beasts of the Wizarding Wizdoms&quot; was published</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tempo_wizdoms</IRI>
+        <Literal xml:lang="en">Publication time of The Wize Wize Beasts of the Wizarding Wizdoms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tempo_wizdoms</IRI>
+        <Literal xml:lang="it">Tempo di pubblicazione di Wizdoms</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
