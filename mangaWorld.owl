@@ -7,7 +7,6 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://modSem/miriam/ontologies/2020/mangaWorld">
     <Prefix name="" IRI="http://modSem/miriam/ontologies/2020/mangaWorld"/>
-    <Prefix name="db" IRI="http://dbpedia.org/"/>
     <Prefix name="dbr" IRI="http://dbpedia.org/resource/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -20,19 +19,11 @@
     <Import>http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl</Import>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <Literal xml:lang="en">Miriam Fasciana</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <Literal xml:lang="it">Miriam Fasciana</Literal>
+        <Literal>Miriam Fasciana</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <Literal xml:lang="en">2020-01-07</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <Literal xml:lang="it">2020-01-07</Literal>
+        <Literal>2020-01-07</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
@@ -66,6 +57,9 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <Literal xml:lang="it">MondoManga</Literal>
     </Annotation>
+    <Declaration>
+        <Class IRI="http://dbpedia.org/ontology/Country"/>
+    </Declaration>
     <Declaration>
         <Class IRI="http://dbpedia.org/ontology/Manga"/>
     </Declaration>
@@ -220,7 +214,7 @@
         <ObjectProperty IRI="#disegna"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#disegnata_da"/>
+        <ObjectProperty IRI="#disegnato_da"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#ha_categoria"/>
@@ -253,10 +247,10 @@
         <ObjectProperty IRI="#orientata_a_pubblico"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+        <ObjectProperty IRI="#pubblicato_nel_periodo"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#scritta_da"/>
+        <ObjectProperty IRI="#scritto_da"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#scrive"/>
@@ -289,7 +283,10 @@
         <DataProperty IRI="#titolo_originale"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="db:Gangan_Comics__Monthly_Shōnen_Gangan__1"/>
+        <DataProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="dbr:Japan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BoysLove"/>
@@ -427,12 +424,23 @@
         <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="http://dbpedia.org/ontology/Country"/>
+        <Class IRI="#Nazione"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="http://dbpedia.org/ontology/Manga"/>
         <Class IRI="#Manga"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="http://https://www.wikidata.org/wiki/Q191633"/>
         <Class IRI="#Mangaka"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BoysLove"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ha_genere"/>
+            <Class IRI="#Amore_omosessuale_maschile"/>
+        </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Global_manga"/>
@@ -765,6 +773,18 @@
         <Class IRI="#Amore_omosessuale_femminile"/>
         <Class IRI="#Amore_omosessuale_maschile"/>
     </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capitolo"/>
+        <Class IRI="#Categoria"/>
+        <Class IRI="#Contesto"/>
+        <Class IRI="#Genere"/>
+        <Class IRI="#Manga"/>
+        <Class IRI="#Manga_magazine"/>
+        <Class IRI="#Nazione"/>
+        <Class IRI="#Persona"/>
+        <Class IRI="#Pubblico"/>
+        <Class IRI="#Tankobon"/>
+    </DisjointClasses>
     <DisjointUnion>
         <Class IRI="#Nazione"/>
         <Class IRI="#Nazione_giapponese"/>
@@ -773,10 +793,6 @@
     <ClassAssertion>
         <Class IRI="#BoysLove"/>
         <NamedIndividual IRI="#BoysLove"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Manga"/>
-        <NamedIndividual IRI="#Judge"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Manga_magazine"/>
@@ -853,6 +869,7 @@
         <NamedIndividual IRI="#tempo_doubt"/>
         <NamedIndividual IRI="#tempo_girl_from"/>
         <NamedIndividual IRI="#tempo_judge"/>
+        <NamedIndividual IRI="#tempo_wizdoms"/>
     </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#is_part_of_tankobon"/>
@@ -895,17 +912,17 @@
         <NamedIndividual IRI="#Wizdoms1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#disegnata_da"/>
+        <ObjectProperty IRI="#disegnato_da"/>
         <NamedIndividual IRI="#Doubt"/>
         <NamedIndividual IRI="#YoshikiTonogai"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+        <ObjectProperty IRI="#pubblicato_nel_periodo"/>
         <NamedIndividual IRI="#Doubt"/>
         <NamedIndividual IRI="#tempo_doubt"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#scritta_da"/>
+        <ObjectProperty IRI="#scritto_da"/>
         <NamedIndividual IRI="#Doubt"/>
         <NamedIndividual IRI="#YoshikiTonogai"/>
     </ObjectPropertyAssertion>
@@ -915,7 +932,7 @@
         <NamedIndividual IRI="#Monthly_Shōnen_Gangan"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#disegnata_da"/>
+        <ObjectProperty IRI="#disegnato_da"/>
         <NamedIndividual IRI="#Girl_from_the_other_side"/>
         <NamedIndividual IRI="#Nagabe"/>
     </ObjectPropertyAssertion>
@@ -930,12 +947,12 @@
         <NamedIndividual IRI="#Giappone"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+        <ObjectProperty IRI="#pubblicato_nel_periodo"/>
         <NamedIndividual IRI="#Girl_from_the_other_side"/>
         <NamedIndividual IRI="#tempo_girl_from"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#scritta_da"/>
+        <ObjectProperty IRI="#scritto_da"/>
         <NamedIndividual IRI="#Girl_from_the_other_side"/>
         <NamedIndividual IRI="#Nagabe"/>
     </ObjectPropertyAssertion>
@@ -945,7 +962,7 @@
         <NamedIndividual IRI="#Manga_blade"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+        <ObjectProperty IRI="#pubblicato_nel_periodo"/>
         <NamedIndividual IRI="#Judge"/>
         <NamedIndividual IRI="#tempo_judge"/>
     </ObjectPropertyAssertion>
@@ -1020,7 +1037,7 @@
         <NamedIndividual IRI="#Giappone"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+        <ObjectProperty IRI="#pubblicato_nel_periodo"/>
         <NamedIndividual IRI="#Wizdoms"/>
         <NamedIndividual IRI="#tempo_wizdoms"/>
     </ObjectPropertyAssertion>
@@ -1187,7 +1204,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#numero_di_volumi"/>
         <NamedIndividual IRI="#Judge"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">6</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#stato_in_patria"/>
@@ -1247,7 +1264,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#numero_di_volumi"/>
         <NamedIndividual IRI="#PenguinRumble"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#stato_in_patria"/>
@@ -1352,7 +1369,7 @@
     </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#disegna"/>
-        <ObjectProperty IRI="#disegnata_da"/>
+        <ObjectProperty IRI="#disegnato_da"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#has_chapter"/>
@@ -1363,7 +1380,7 @@
         <ObjectProperty IRI="#is_part_of_manga"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#scritta_da"/>
+        <ObjectProperty IRI="#scritto_da"/>
         <ObjectProperty IRI="#scrive"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
@@ -1387,7 +1404,7 @@
         <Class IRI="#Mangaka"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#disegnata_da"/>
+        <ObjectProperty IRI="#disegnato_da"/>
         <Class IRI="#Manga"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1423,11 +1440,11 @@
         <Class IRI="#Categoria"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+        <ObjectProperty IRI="#pubblicato_nel_periodo"/>
         <Class IRI="#Manga"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#scritta_da"/>
+        <ObjectProperty IRI="#scritto_da"/>
         <Class IRI="#Manga"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1447,7 +1464,7 @@
         <Class IRI="#Manga"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#disegnata_da"/>
+        <ObjectProperty IRI="#disegnato_da"/>
         <Class IRI="#Mangaka"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -1483,11 +1500,11 @@
         <Class IRI="#Pubblico"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+        <ObjectProperty IRI="#pubblicato_nel_periodo"/>
         <Class abbreviatedIRI="time:TimeInterval"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#scritta_da"/>
+        <ObjectProperty IRI="#scritto_da"/>
         <Class IRI="#Mangaka"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -1505,6 +1522,10 @@
         </ObjectPropertyChain>
         <ObjectProperty IRI="#manga_ha_contesto"/>
     </SubObjectPropertyOf>
+    <EquivalentDataProperties>
+        <DataProperty IRI="#titolo"/>
+        <DataProperty IRI="http://purl.org/dc/terms/title"/>
+    </EquivalentDataProperties>
     <FunctionalDataProperty>
         <DataProperty IRI="#numero_del_tankobon"/>
     </FunctionalDataProperty>
@@ -1635,12 +1656,8 @@
             <Literal>S2</Literal>
         </Annotation>
         <Body>
-            <ClassAtom>
-                <Class IRI="#Manga"/>
-                <Variable IRI="#m"/>
-            </ClassAtom>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#pubblicata_nel_periodo"/>
+                <ObjectProperty IRI="#pubblicato_nel_periodo"/>
                 <Variable IRI="#m"/>
                 <Variable IRI="#t"/>
             </ObjectPropertyAtom>
@@ -1649,6 +1666,10 @@
                 <Variable IRI="#t"/>
                 <Variable IRI="#e"/>
             </DataPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Manga"/>
+                <Variable IRI="#m"/>
+            </ClassAtom>
         </Body>
         <Head>
             <DataPropertyAtom>
@@ -1700,41 +1721,6 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>Allineare la rivista Monthly Shonen Gangan con quella presente su DBpedia</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>S5</Literal>
-        </Annotation>
-        <Body>
-            <ClassAtom>
-                <Class IRI="#Manga_magazine"/>
-                <Variable IRI="#m"/>
-            </ClassAtom>
-            <DataPropertyAtom>
-                <DataProperty IRI="#nome_rivista"/>
-                <Variable IRI="#m"/>
-                <Variable IRI="#n"/>
-            </DataPropertyAtom>
-            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#containsIgnoreCase">
-                <Variable IRI="#n"/>
-                <Literal>monthly shonen gangan</Literal>
-            </BuiltInAtom>
-        </Body>
-        <Head>
-            <SameIndividualAtom>
-                <Variable IRI="#m"/>
-                <NamedIndividual abbreviatedIRI="db:Gangan_Comics__Monthly_Shōnen_Gangan__1"/>
-            </SameIndividualAtom>
-        </Head>
-    </DLSafeRule>
-    <DLSafeRule>
-        <Annotation>
-            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal>Se il nome di un manga magazine contiene la parola shonen allora serializza manga di categoria shonen</Literal>
         </Annotation>
         <Annotation>
@@ -1768,25 +1754,96 @@
             </ObjectPropertyAtom>
         </Head>
     </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Allineare il Giappone con quello presente in DBpedia</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S5</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Nazione_giapponese"/>
+                <Variable IRI="#n"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <SameIndividualAtom>
+                <Variable IRI="#n"/>
+                <NamedIndividual abbreviatedIRI="dbr:Japan"/>
+            </SameIndividualAtom>
+        </Head>
+    </DLSafeRule>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>db:Gangan_Comics__Monthly_Shōnen_Gangan__1</AbbreviatedIRI>
-        <Literal xml:lang="it">Monthly shonen gangan nell&apos;ontologia Dublin Core</Literal>
+        <IRI>http://dbpedia.org/ontology/Country</IRI>
+        <Literal xml:lang="en">Country in DBpedia</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>db:Gangan_Comics__Monthly_Shōnen_Gangan__1</AbbreviatedIRI>
-        <Literal xml:lang="en">Monthly shonen gangan on DBpedia</Literal>
+        <IRI>http://dbpedia.org/ontology/Country</IRI>
+        <Literal xml:lang="it">Stato in DBpedia</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>db:Gangan_Comics__Monthly_Shōnen_Gangan__1</AbbreviatedIRI>
-        <Literal xml:lang="en">Monthly Shōnen Gangan</Literal>
+        <IRI>http://dbpedia.org/ontology/Country</IRI>
+        <Literal xml:lang="en">Country</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>db:Gangan_Comics__Monthly_Shōnen_Gangan__1</AbbreviatedIRI>
-        <Literal xml:lang="it">Monthly Shōnen Gangan</Literal>
+        <IRI>http://dbpedia.org/ontology/Country</IRI>
+        <Literal xml:lang="it">Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://dbpedia.org/ontology/Manga</IRI>
+        <Literal xml:lang="en">Manga in DBpedia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://dbpedia.org/ontology/Manga</IRI>
+        <Literal xml:lang="it">Manga in DBpedia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dbr:Japan</AbbreviatedIRI>
+        <Literal xml:lang="it">Giappone in DBpedia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dbr:Japan</AbbreviatedIRI>
+        <Literal xml:lang="en">Japan in DBpedia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dbr:Japan</AbbreviatedIRI>
+        <Literal xml:lang="it">Giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dbr:Japan</AbbreviatedIRI>
+        <Literal xml:lang="en">Japan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://https://www.wikidata.org/wiki/Q191633</IRI>
+        <Literal xml:lang="it">Mangaka in Wikidata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://https://www.wikidata.org/wiki/Q191633</IRI>
+        <Literal xml:lang="en">Mangaka in wikidata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://https://www.wikidata.org/wiki/Q191633</IRI>
+        <Literal xml:lang="it">mangaka</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3395,22 +3452,22 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#disegnata_da</IRI>
+        <IRI>#disegnato_da</IRI>
         <Literal xml:lang="en">A manga is drawn by a specific mangaka</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#disegnata_da</IRI>
+        <IRI>#disegnato_da</IRI>
         <Literal xml:lang="it">Un manga è disegnato da uno specifico mangaka</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#disegnata_da</IRI>
+        <IRI>#disegnato_da</IRI>
         <Literal xml:lang="it">Disegnato da</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#disegnata_da</IRI>
+        <IRI>#disegnato_da</IRI>
         <Literal xml:lang="en">Drawn by</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -3695,42 +3752,42 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#pubblicata_nel_periodo</IRI>
+        <IRI>#pubblicato_nel_periodo</IRI>
         <Literal xml:lang="en">A manga&apos;s publication takes a certain period of time</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#pubblicata_nel_periodo</IRI>
+        <IRI>#pubblicato_nel_periodo</IRI>
         <Literal xml:lang="it">La pubblicazione di un manga avviene un certo periodo di tempo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#pubblicata_nel_periodo</IRI>
+        <IRI>#pubblicato_nel_periodo</IRI>
         <Literal xml:lang="it">Pubblicata nel periodo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#pubblicata_nel_periodo</IRI>
+        <IRI>#pubblicato_nel_periodo</IRI>
         <Literal xml:lang="en">Published in period</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#scritta_da</IRI>
+        <IRI>#scritto_da</IRI>
         <Literal xml:lang="en">A manga is written by a specific mangaka</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#scritta_da</IRI>
+        <IRI>#scritto_da</IRI>
         <Literal xml:lang="it">Un manga è scritto da uno specifico mangaka</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#scritta_da</IRI>
+        <IRI>#scritto_da</IRI>
         <Literal xml:lang="it">Scritto da</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#scritta_da</IRI>
+        <IRI>#scritto_da</IRI>
         <Literal xml:lang="en">Written by</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -3952,6 +4009,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#titolo_originale</IRI>
         <Literal xml:lang="it">Titolo originale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.org/dc/terms/title</IRI>
+        <Literal xml:lang="en">Title property in DublinCore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.org/dc/terms/title</IRI>
+        <Literal xml:lang="it">proprietà Titolo in DublinCore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://xmlns.com/foaf/0.1/Person</IRI>
+        <Literal xml:lang="en">Person in FOAF</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://xmlns.com/foaf/0.1/Person</IRI>
+        <Literal xml:lang="it">Persona in FOAF</Literal>
     </AnnotationAssertion>
 </Ontology>
 

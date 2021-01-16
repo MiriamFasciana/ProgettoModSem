@@ -1,5 +1,4 @@
 @prefix : <http://modSem/miriam/ontologies/2020/mangaWorld> .
-@prefix db: <http://dbpedia.org/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -13,10 +12,8 @@
 <http://modSem/miriam/ontologies/2020/mangaWorld> rdf:type owl:Ontology ;
                                                    owl:imports <http://www.ontologydesignpatterns.org/cp/owl/partof.owl> ,
                                                                <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl> ;
-                                                   <http://purl.org/dc/elements/1.1/creator> "Miriam Fasciana"@en ,
-                                                                                             "Miriam Fasciana"@it ;
-                                                   <http://purl.org/dc/elements/1.1/date> "2020-01-07"@en ,
-                                                                                          "2020-01-07"@it ;
+                                                   <http://purl.org/dc/elements/1.1/creator> "Miriam Fasciana" ;
+                                                   <http://purl.org/dc/elements/1.1/date> "2020-01-07" ;
                                                    <http://purl.org/dc/elements/1.1/description> "Manga ontology specialized on categories"@en ,
                                                                                                  "Ontologia sul dominio dei manga focalizzata sulle categorie"@it ;
                                                    <http://purl.org/dc/elements/1.1/title> "Manga ontology"@en ,
@@ -74,7 +71,7 @@ manga:ambientata_in_contesto rdf:type owl:ObjectProperty ;
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#disegna
 manga:disegna rdf:type owl:ObjectProperty ;
-              owl:inverseOf manga:disegnata_da ;
+              owl:inverseOf manga:disegnato_da ;
               rdfs:domain manga:Mangaka ;
               rdfs:range manga:Manga ;
               rdfs:comment "A mangaka draws a specific manga"@en ,
@@ -83,8 +80,8 @@ manga:disegna rdf:type owl:ObjectProperty ;
                          "Draws"@en .
 
 
-###  http://modSem/miriam/ontologies/2020/mangaWorld#disegnata_da
-manga:disegnata_da rdf:type owl:ObjectProperty ;
+###  http://modSem/miriam/ontologies/2020/mangaWorld#disegnato_da
+manga:disegnato_da rdf:type owl:ObjectProperty ;
                    rdfs:domain manga:Manga ;
                    rdfs:range manga:Mangaka ;
                    rdfs:comment "A manga is drawn by a specific mangaka"@en ,
@@ -201,8 +198,8 @@ manga:orientata_a_pubblico rdf:type owl:ObjectProperty ,
                                       "Orientata ad un pubblico"@it .
 
 
-###  http://modSem/miriam/ontologies/2020/mangaWorld#pubblicata_nel_periodo
-manga:pubblicata_nel_periodo rdf:type owl:ObjectProperty ;
+###  http://modSem/miriam/ontologies/2020/mangaWorld#pubblicato_nel_periodo
+manga:pubblicato_nel_periodo rdf:type owl:ObjectProperty ;
                              rdfs:domain manga:Manga ;
                              rdfs:range time:TimeInterval ;
                              rdfs:comment "A manga's publication takes a certain period of time"@en ,
@@ -211,8 +208,8 @@ manga:pubblicata_nel_periodo rdf:type owl:ObjectProperty ;
                                         "Published in period"@en .
 
 
-###  http://modSem/miriam/ontologies/2020/mangaWorld#scritta_da
-manga:scritta_da rdf:type owl:ObjectProperty ;
+###  http://modSem/miriam/ontologies/2020/mangaWorld#scritto_da
+manga:scritto_da rdf:type owl:ObjectProperty ;
                  owl:inverseOf manga:scrive ;
                  rdfs:domain manga:Manga ;
                  rdfs:range manga:Mangaka ;
@@ -318,6 +315,7 @@ manga:stato_in_patria rdf:type owl:DatatypeProperty ;
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#titolo
 manga:titolo rdf:type owl:DatatypeProperty ;
+             owl:equivalentProperty <http://purl.org/dc/terms/title> ;
              rdfs:domain [ rdf:type owl:Class ;
                            owl:unionOf ( manga:Capitolo
                                          manga:Manga
@@ -345,18 +343,38 @@ manga:titolo_originale rdf:type owl:DatatypeProperty ,
                                   "Titolo originale"@it .
 
 
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
+                                 rdfs:comment "Title property in DublinCore"@en ,
+                                              "proprietà Titolo in DublinCore"@it .
+
+
 #################################################################
 #    Classes
 #################################################################
 
+###  http://dbpedia.org/ontology/Country
+<http://dbpedia.org/ontology/Country> rdf:type owl:Class ;
+                                      owl:equivalentClass manga:Nazione ;
+                                      rdfs:comment "Country in DBpedia"@en ,
+                                                   "Stato in DBpedia"@it ;
+                                      rdfs:label "Country"@en ,
+                                                 "Stato"@it .
+
+
 ###  http://dbpedia.org/ontology/Manga
 <http://dbpedia.org/ontology/Manga> rdf:type owl:Class ;
-                                    owl:equivalentClass manga:Manga .
+                                    owl:equivalentClass manga:Manga ;
+                                    rdfs:comment "Manga in DBpedia"@en ,
+                                                 "Manga in DBpedia"@it .
 
 
 ###  http://https://www.wikidata.org/wiki/Q191633
 <http://https://www.wikidata.org/wiki/Q191633> rdf:type owl:Class ;
                                                owl:equivalentClass manga:Mangaka ;
+                                               rdfs:comment "Mangaka in Wikidata"@it ,
+                                                            "Mangaka in wikidata"@en ,
+                                                            "mangaka"@it ;
                                                rdfs:label "mangaka"@en .
 
 
@@ -455,6 +473,10 @@ manga:Azione rdf:type owl:Class ;
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove
 manga:BoysLove rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty manga:ha_genere ;
+                                     owl:someValuesFrom manga:Amore_omosessuale_maschile
+                                   ] ;
                rdfs:subClassOf manga:Categoria .
 
 
@@ -896,19 +918,21 @@ manga:Yuri rdf:type owl:Class ;
 
 
 ###  http://xmlns.com/foaf/0.1/Person
-<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+                                   rdfs:comment "Person in FOAF"@en ,
+                                                "Persona in FOAF"@it .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://dbpedia.org/Gangan_Comics__Monthly_Shōnen_Gangan__1
-db:Gangan_Comics__Monthly_Shōnen_Gangan__1 rdf:type owl:NamedIndividual ;
-                                           rdfs:comment "Monthly shonen gangan nell'ontologia Dublin Core"@it ,
-                                                        "Monthly shonen gangan on DBpedia"@en ;
-                                           rdfs:label "Monthly Shōnen Gangan"@en ,
-                                                      "Monthly Shōnen Gangan"@it .
+###  http://dbpedia.org/resource/Japan
+dbr:Japan rdf:type owl:NamedIndividual ;
+          rdfs:comment "Giappone in DBpedia"@it ,
+                       "Japan in DBpedia"@en ;
+          rdfs:label "Giappone"@it ,
+                     "Japan"@en .
 
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#BoysLove
@@ -1006,9 +1030,9 @@ manga:Capitolo8Wizdoms rdf:type owl:NamedIndividual ;
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#Doubt
 manga:Doubt rdf:type owl:NamedIndividual ;
-            manga:disegnata_da manga:YoshikiTonogai ;
-            manga:pubblicata_nel_periodo manga:tempo_doubt ;
-            manga:scritta_da manga:YoshikiTonogai ;
+            manga:disegnato_da manga:YoshikiTonogai ;
+            manga:pubblicato_nel_periodo manga:tempo_doubt ;
+            manga:scritto_da manga:YoshikiTonogai ;
             manga:serializzato_su manga:Monthly_Shōnen_Gangan ;
             manga:numero_di_volumi 4 ;
             manga:stato_in_patria "Completato" ;
@@ -1029,11 +1053,11 @@ manga:Giappone rdf:type owl:NamedIndividual ;
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#Girl_from_the_other_side
 manga:Girl_from_the_other_side rdf:type owl:NamedIndividual ;
-                               manga:disegnata_da manga:Nagabe ;
+                               manga:disegnato_da manga:Nagabe ;
                                manga:ha_categoria manga:categoria_girl_from ;
                                manga:nazione_di_origine manga:Giappone ;
-                               manga:pubblicata_nel_periodo manga:tempo_girl_from ;
-                               manga:scritta_da manga:Nagabe ;
+                               manga:pubblicato_nel_periodo manga:tempo_girl_from ;
+                               manga:scritto_da manga:Nagabe ;
                                manga:serializzato_su manga:Manga_blade ;
                                manga:sottotitolo "Siúil, a Rún"@en ,
                                                  "Siúil, a Rún"@it ;
@@ -1047,11 +1071,10 @@ manga:Girl_from_the_other_side rdf:type owl:NamedIndividual ;
 
 
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#Judge
-manga:Judge rdf:type owl:NamedIndividual ,
-                     manga:Manga ;
-            manga:pubblicata_nel_periodo manga:tempo_judge ;
+manga:Judge rdf:type owl:NamedIndividual ;
+            manga:pubblicato_nel_periodo manga:tempo_judge ;
             manga:serializzato_su manga:Monthly_Shōnen_Gangan ;
-            manga:numero_di_volumi 6 ;
+            manga:numero_di_volumi "6"^^xsd:nonNegativeInteger ;
             manga:stato_in_patria "Completato" ;
             manga:titolo "Judge"@it ;
             rdfs:comment "Manga intitolato \"Judge\""@it ,
@@ -1163,7 +1186,7 @@ manga:Opera rdf:type owl:NamedIndividual ,
 ###  http://modSem/miriam/ontologies/2020/mangaWorld#PenguinRumble
 manga:PenguinRumble rdf:type owl:NamedIndividual ;
                     manga:nazione_di_origine manga:Svezia ;
-                    manga:numero_di_volumi 4 ;
+                    manga:numero_di_volumi "4"^^xsd:nonNegativeInteger ;
                     manga:stato_in_patria "Completato" ;
                     manga:titolo "Penguin Rumble"@it ;
                     manga:titolo_originale "Penguin Rumble"@sw ;
@@ -1185,7 +1208,7 @@ manga:Svezia rdf:type owl:NamedIndividual ;
 manga:Wizdoms rdf:type owl:NamedIndividual ;
               manga:ha_categoria manga:categoria_wizdoms ;
               manga:nazione_di_origine manga:Giappone ;
-              manga:pubblicata_nel_periodo manga:tempo_wizdoms ;
+              manga:pubblicato_nel_periodo manga:tempo_wizdoms ;
               manga:serializzato_su manga:Opera ;
               manga:numero_di_volumi "1"^^xsd:nonNegativeInteger ;
               manga:sottotitolo "The Wize Wize Beasts of the Wizarding Wizdoms"@it ;
@@ -1337,6 +1360,21 @@ manga:BoysLove rdfs:comment "Categoria di manga in cui la storia riguarda l'amor
 ] .
 
 
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( manga:Capitolo
+                manga:Categoria
+                manga:Contesto
+                manga:Genere
+                manga:Manga
+                manga:Manga_magazine
+                manga:Nazione
+                manga:Persona
+                manga:Pubblico
+                manga:Tankobon
+              )
+] .
+
+
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( manga:BoysLove
                         manga:shonen
@@ -1412,6 +1450,7 @@ manga:BoysLove rdfs:comment "Categoria di manga in cui la storia riguarda l'amor
   owl:distinctMembers ( manga:tempo_doubt
                         manga:tempo_girl_from
                         manga:tempo_judge
+                        manga:tempo_wizdoms
                       )
 ] .
 
@@ -1420,13 +1459,11 @@ manga:BoysLove rdfs:comment "Categoria di manga in cui la storia riguarda l'amor
 #    Rules
 #################################################################
 
-<#m> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-<#r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-<#c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
 manga:m rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+manga:r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+manga:c rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 manga:t rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
@@ -1434,30 +1471,28 @@ manga:e rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 manga:n rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<#n> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
 manga:s rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "Capire la categoria di un manga tramite il magazine su cui viene serializzato"^^xsd:string ;
-   rdfs:label "S1"^^xsd:string ;
+   rdfs:comment "Capire la categoria di un manga tramite il magazine su cui viene serializzato" ;
+   rdfs:label "S1" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#classPredicate> manga:Manga ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <#m>
+                                                       <http://www.w3.org/2003/11/swrl#argument1> manga:m
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> manga:serializzato_su ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <#m> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <#r>
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> manga:m ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> manga:r
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> manga:magazine_ha_categoria ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> <#r> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> <#c>
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> manga:r ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> manga:c
                                                                            ] ;
                                                                  rdf:rest rdf:nil
                                                                ]
@@ -1466,8 +1501,8 @@ manga:s rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> manga:ha_categoria ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <#m> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <#c>
+                                                       <http://www.w3.org/2003/11/swrl#argument1> manga:m ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> manga:c
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
@@ -1478,21 +1513,21 @@ manga:s rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
    rdfs:label "S2" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> manga:Manga ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> manga:m
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> manga:pubblicato_nel_periodo ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> manga:m ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> manga:t
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> manga:pubblicata_nel_periodo ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> manga:m ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> manga:t
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> time:hasIntervalEndDate ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> manga:t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> manga:e
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> time:hasIntervalEndDate ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> manga:t ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> manga:e
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> manga:Manga ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> manga:m
                                                                            ] ;
                                                                  rdf:rest rdf:nil
                                                                ]
@@ -1548,45 +1583,6 @@ manga:s rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "Allineare la rivista Monthly Shonen Gangan con quella presente su DBpedia"^^xsd:string ;
-   rdfs:label "S5"^^xsd:string ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> manga:Manga_magazine ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <#m>
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> manga:nome_rivista ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <#m> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <#n>
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#containsIgnoreCase> ;
-                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
-                                                                                                                          rdf:first <#n> ;
-                                                                                                                          rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                     rdf:first "monthly shonen gangan"^^xsd:string ;
-                                                                                                                                     rdf:rest rdf:nil
-                                                                                                                                   ]
-                                                                                                                        ]
-                                                                           ] ;
-                                                                 rdf:rest rdf:nil
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#SameIndividualAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <#m> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> db:Gangan_Comics__Monthly_Shōnen_Gangan__1
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "Se il nome di un manga magazine contiene la parola shonen allora serializza manga di categoria shonen" ;
    rdfs:label "S4" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
@@ -1627,6 +1623,26 @@ manga:s rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> manga:magazine_ha_categoria ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> manga:m ;
                                                        <http://www.w3.org/2003/11/swrl#argument2> manga:s
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Allineare il Giappone con quello presente in DBpedia" ;
+   rdfs:label "S5" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> manga:Nazione_giapponese ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> manga:n
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#SameIndividualAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> manga:n ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> dbr:Japan
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
